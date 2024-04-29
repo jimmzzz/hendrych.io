@@ -13,7 +13,7 @@ const props = defineProps<Props>()
 
 const sizes = {
     'display': 'text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight',
-    'subHeading': 'text-2xl text-slate-400 font-semibold',
+    'subHeading': 'text-2xl text-slate-500 font-semibold',
     '1': 'text-4xl lg:text-5xl font-bold',
     '2': 'text-3xl lg:text-4xl font-bold',
     '3': 'text-3xl font-bold',

@@ -26,11 +26,17 @@ export default {
             800: '#1C051E',
             900: '#000000',
             950: '#000000'
-        }
+        },
+        darkBlue: '#0C121F',
+        darkLight: '#242A36',
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+      gridTemplateColumns: {
+        // Complex site-specific column configuration
+        'footer': 'repeat(3, minmax(0, 175px))',
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],

@@ -7,11 +7,14 @@ definePageMeta({
 <template>
   <LandingContainer>
     <LandingHero />
+    <!-- <LandingClients /> -->
+    <!-- TODO: clients -->
     <LandingFeatures />
     <LandingAbout />
 
-    <LandingLogos />
+    <!-- <LandingTechStack /> -->
     <LandingProjects />
-    <LandingCta />
+    <!-- <LandingNewsletter /> -->
+    <!-- <LandingCta /> -->
   </LandingContainer>
 </template>

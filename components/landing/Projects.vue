@@ -22,15 +22,7 @@ const features = [
 </script>
 
 <template>
-  <div class="mt-48">
-    <!-- <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-      Unlock Your Business Potential With My Services
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 max-w-[850px]">
-      Offer a range of frontend development services to help you succeed online. From responsive design to website
-      optimization, i'm here to help you create a website that not only looks great, but also performs flawlessly on any
-      device.
-    </p> -->
+  <div class="mt-24 md:mt-36">
     <UIHeading :level="'subHeading'" class="mb-6"> Projects </UIHeading>
     <UIHeading :level="2" class="mb-8 lg:mb-14"> My working portfolio </UIHeading>
   </div>
