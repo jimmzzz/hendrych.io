@@ -7,7 +7,7 @@ const translations = {
       device.`
 }
 
-const features = [
+const services = [
   {
     title: 'HTML & CSS responsive web design',
     description:
@@ -48,24 +48,26 @@ const features = [
 </script>
 
 <template>
-  <div class='mt-16 md:mt-0'>
-    <UIHeading :level="1" class="lg:tracking-tight">{{ translations.title }}</UIHeading>
-    <UIParagraph size="lg" className="mt-4 max-w-[850px]">
-      {{ translations.description }}
-    </UIParagraph>
-  </div>
-
-  <div class='grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 mb-20'>
-    <div v-for='item of features' class='flex gap-4 items-start'>
-      <!-- <div class='mt-1 bg-primary-400 rounded-full p-2 w-8 h-8 shrink-0'> -->
-      <div class='flex flex-shrink-0 justify-center items-center w-8 h-8  md:w-10 md:h-10 rounded-full bg-primary-500'>
-        <Icon class='text-white' :name='item.icon' />
-      </div>
-      <div>
-        <UIHeading :level="6" class="font-semibold">{{ item.title }}</UIHeading>
-        <UIParagraph styleName="relaxed" className="mt-2">
-          {{ item.description }}
-        </UIParagraph>
+  <div class="pt-16 md:pt-24">
+    <div>
+      <UIHeading :level="1" class="lg:tracking-tight">{{ translations.title }}</UIHeading>
+      <UIParagraph size="lg" className="mt-4 max-w-[850px]">
+        {{ translations.description }}
+      </UIParagraph>
+    </div>
+    <div class='grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 mb-20'>
+      <div v-for='item of services' class='flex gap-4 items-start'>
+        <!-- <div class='mt-1 bg-primary-400 rounded-full p-2 w-8 h-8 shrink-0'> -->
+        <div
+          class='flex flex-shrink-0 justify-center items-center w-8 h-8  md:w-10 md:h-10 rounded-full bg-primary-500'>
+          <Icon class='text-white' :name='item.icon' />
+        </div>
+        <div>
+          <UIHeading :level="6" class="font-semibold">{{ item.title }}</UIHeading>
+          <UIParagraph styleName="relaxed" className="mt-2">
+            {{ item.description }}
+          </UIParagraph>
+        </div>
       </div>
     </div>
   </div>

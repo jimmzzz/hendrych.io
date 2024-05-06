@@ -1,9 +1,9 @@
 <template>
-  <div class="my-16">
+  <div class="mt-16 mb-0 md:mt-16 md:mb-0">
     <UIHeading :level="2" class="text-center mb-2">Technologies and tools that I'm using</UIHeading>
     <div class="flex gap-8 md:gap-8 items-center justify-center mt-10 flex-wrap">
       <div v-for="item in techStack" :key="item.label" class="flex flex-col justify-center items-center min-w-14">
-        <Icon :name="`simple-icons:${item.icon}`" class="h-8 md:h-14" size="32" />
+        <Icon :name="`simple-icons:${item.icon}`" class="h-8 md:h-14" size="32" :alt="item.label" />
         <UIParagraph size="xs" class="mt-1">{{ item.label }}</UIParagraph>
       </div>
     </div>

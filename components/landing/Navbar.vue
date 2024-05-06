@@ -1,6 +1,14 @@
 <script setup>
 import { navigationLinks } from '@/utils/links';
 
+const scrollToElement = (id) => {
+  const element = document.getElementById(id);
+  console.log(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const open = ref(false);
 </script>
 
@@ -34,7 +42,8 @@ const open = ref(false);
             <li v-for="link in navigationLinks" :key="link.label">
               <!-- v-if="link.url !== '/blog'" -->
               <nuxt-link aria-current="page" :to="{ path: link.path, hash: link.hash }"
-                class="flex lg:px-3 py-2 text-gray-600 hover:text-primary-500">
+                class="flex lg:px-3 py-2 text-gray-600 hover:text-primary-500"
+                @click.prevent="scrollToElement(link.id)">
                 {{ link.label }}
               </nuxt-link>
             </li>

@@ -6,14 +6,14 @@ definePageMeta({
 
 <template>
   <LandingContainer>
-    <LandingHero />
+    <LandingHero id="home" />
     <!-- <LandingClients /> -->
     <!-- TODO: clients -->
-    <LandingFeatures />
-    <LandingAbout />
+    <LandingServices id="services" />
+    <LandingAbout id="aboutMe" />
+    <LandingTechStack />
+    <LandingProjects id="projects" />
 
-    <!-- <LandingTechStack /> -->
-    <LandingProjects />
     <!-- <LandingNewsletter /> -->
     <!-- <LandingCta /> -->
   </LandingContainer>

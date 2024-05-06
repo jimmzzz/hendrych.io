@@ -18,6 +18,7 @@ export const navigationLinks: NavigationLink[] = [
     { id: 'services', label: 'Services', path: '/', hash: '#services' },
     { id: 'aboutMe', label: 'About me', path: '/', hash: '#about-me' },
     { id: 'contact', label: 'Contact', path: '/', hash: '#contact' },
+    { id: 'projects', label: 'Projects', path: '/', hash: '#projects' },
     { id: 'blog', label: 'Blog', path: '/blog' },
 ]
 
