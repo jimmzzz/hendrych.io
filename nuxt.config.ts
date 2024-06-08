@@ -8,5 +8,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["nuxt-icon"],
+  modules: ["nuxt-icon", "@nuxt/content", "@nuxtjs/tailwindcss"],
+  tailwindcss: {
+    exposeConfig: true,
+    viewer: true,
+  },
+  content: {
+    highlight: {
+      theme: 'dark-plus'
+    },
+  },
 });
