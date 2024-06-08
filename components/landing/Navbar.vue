@@ -1,5 +1,8 @@
 <script setup>
+import { onMounted } from 'vue';
 import { navigationLinks } from '@/utils/links';
+
+const open = ref(false);
 
 const scrollToElement = (id) => {
   const element = document.getElementById(id);
@@ -9,11 +12,25 @@ const scrollToElement = (id) => {
   }
 };
 
-const open = ref(false);
+const toggleNavbarShadow = () => {
+  const navBar = document.getElementById('navBar');
+  if (window.scrollY > 22) {
+    navBar.classList.add('shadow-lg');
+  } else {
+    navBar.classList.remove('shadow-lg');
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    toggleNavbarShadow()
+  });
+});
+
 </script>
 
 <template>
-  <div class="sticky top-0 z-50 bg-white">
+  <div id="navBar" class="sticky top-0 z-50 bg-white transition-shadow delay-100">
     <LandingContainer>
       <header class="flex flex-col lg:flex-row justify-between items-center py-5">
         <div class="flex w-full lg:w-auto items-center justify-between">
