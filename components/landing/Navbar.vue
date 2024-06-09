@@ -75,13 +75,11 @@ const open = ref(false);
 const scrolled = ref(0)
 
 const navLinks = computed(() => {
-  console.log(route);
   return String(route.name).includes('blog') ? navigationLinksBlog : navigationLinks
 })
 
 const scrollToElement = (id: string) => {
   const element = document.getElementById(id);
-  console.log(id);
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
@@ -112,7 +110,6 @@ onMounted(() => {
 
     if (route.name === 'blog-slug') {
       calcScrollIndicator()
-      console.log(scrolled.value);
     }
   });
 });

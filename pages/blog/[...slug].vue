@@ -30,10 +30,6 @@ import { formatDate } from '../../utils/date';
 definePageMeta({
     layout: 'blog',
 });
-
-// const { data } = await useAsyncData('page-data', () => queryContent('blog/changing-html-text-content-with-javascript').findOne())
-// console.log(data)
-
 </script>
 
 <style scoped></style>

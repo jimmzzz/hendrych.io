@@ -42,7 +42,6 @@ const query: QueryBuilderParams = {
     sort: [{ date: -1 }]
 }
 
-console.log(query)
 </script>
 
 <style scoped>

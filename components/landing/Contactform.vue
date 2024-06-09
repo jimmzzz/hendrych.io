@@ -30,13 +30,12 @@ onMounted(() => {
           result.classList.add("text-green-500");
           result.innerHTML = json.message;
         } else {
-          console.log(response);
           result.classList.add("text-red-500");
           result.innerHTML = json.message;
         }
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
         result.innerHTML = "Something went wrong!";
       })
       .then(function () {
@@ -53,43 +52,22 @@ onMounted(() => {
 <template>
   <!-- To make this contact form work, create your free access key from https://web3forms.com/
      Then you will get all form submissions in your email inbox. -->
-  <form
-    action="https://api.web3forms.com/submit"
-    method="POST"
-    id="form"
-    class="needs-validation"
-    novalidate
-  >
+  <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
     <!-- Create your free access key from https://web3forms.com/ -->
-    <input
-      type="checkbox"
-      class="hidden"
-      style="display: none"
-      name="botcheck"
-    />
+    <input type="checkbox" class="hidden" style="display: none" name="botcheck" />
     <div class="mb-5">
-      <input
-        type="text"
-        placeholder="Full Name"
-        required
+      <input type="text" placeholder="Full Name" required
         class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
-        name="name"
-      />
+        name="name" />
       <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
         Please provide your full name.
       </div>
     </div>
     <div class="mb-5">
-      <label for="email_address" class="sr-only">Email Address</label
-      ><input
-        id="email_address"
-        type="email"
-        placeholder="Email Address"
-        name="email"
-        required
-        class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
-      />
+      <label for="email_address" class="sr-only">Email Address</label><input id="email_address" type="email"
+        placeholder="Email Address" name="email" required
+        class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100" />
       <div class="empty-feedback text-red-400 text-sm mt-1">
         Please provide your email address.
       </div>
@@ -98,12 +76,8 @@ onMounted(() => {
       </div>
     </div>
     <div class="mb-3">
-      <textarea
-        name="message"
-        required
-        placeholder="Your Message"
-        class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
-      ></textarea>
+      <textarea name="message" required placeholder="Your Message"
+        class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"></textarea>
       <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
         Please enter your message.
       </div>
@@ -119,11 +93,11 @@ onMounted(() => {
   display: none;
 }
 
-.was-validated :placeholder-shown:invalid ~ .empty-feedback {
+.was-validated :placeholder-shown:invalid~.empty-feedback {
   display: block;
 }
 
-.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+.was-validated :not(:placeholder-shown):invalid~.invalid-feedback {
   display: block;
 }
 
