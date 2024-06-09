@@ -8,8 +8,6 @@ tags:
   - Sustainability
 ---
 
-# Urban Gardening: Transforming City Spaces into Green Havens
-
 ## Introduction
 Exploration of urban gardening and its importance in modern city life.
 

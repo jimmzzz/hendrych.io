@@ -9,8 +9,6 @@ tags:
   - Environment
 ---
 
-# Exploring the Future of Renewable Energy
-
 ## Introduction
 Discuss the importance of renewable energy and its role in combating climate change.
 

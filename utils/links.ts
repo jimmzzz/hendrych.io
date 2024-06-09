@@ -4,6 +4,7 @@ export interface NavigationLink {
     label: string;
     path: string;
     hash?: string;
+    icon?: string;
 }
 
 export interface IconLink extends NavigationLink {
@@ -20,6 +21,12 @@ export const navigationLinks: NavigationLink[] = [
     { id: 'contact', label: 'Contact', path: '/', hash: '#contact' },
     { id: 'projects', label: 'Projects', path: '/', hash: '#projects' },
     { id: 'blog', label: 'Blog', path: '/blog' },
+]
+
+export const navigationLinksBlog: NavigationLink[] = [
+    { id: 'blog', label: 'All articles', path: '/blog' },
+    // { id: 'collections', label: 'Collections', path: '/blog/collections' },
+    // todo: social icons only
 ]
 
 export const socialLinks: IconLink[] = [

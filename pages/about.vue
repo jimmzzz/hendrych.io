@@ -39,7 +39,7 @@ const team = [
 </script>
 
 <template>
-  <LandingContainer>
+  <LayoutContainer>
     <LandingSectionhead>
       <template v-slot:title>About</template>
       <template v-slot:desc>We are a small passionate team.</template>
@@ -58,14 +58,8 @@ const team = [
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       <div v-for="item of team" class="group">
         <div class="w-full aspect-square">
-          <img
-            :src="item.avatar.src"
-            :width="item.avatar.width"
-            :height="item.avatar.height"
-            format="avif"
-            alt="Team"
-            class="w-full h-full object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-          />
+          <img :src="item.avatar.src" :width="item.avatar.width" :height="item.avatar.height" format="avif" alt="Team"
+            class="w-full h-full object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl" />
         </div>
 
         <div class="mt-4 text-center">
@@ -93,5 +87,5 @@ const team = [
         ))
       } -->
     </div>
-  </LandingContainer>
+  </LayoutContainer>
 </template>

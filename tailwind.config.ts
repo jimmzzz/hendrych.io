@@ -1,3 +1,4 @@
+import { _maxHeight, _typography } from "#tailwind-config/theme";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
@@ -36,8 +37,38 @@ export default {
       gridTemplateColumns: {
         // Complex site-specific column configuration
         'footer': 'repeat(3, minmax(0, 175px))',
-      }
+      },
+      
+      typography: {
+        DEFAULT: { // this is for prose class
+          css: {
+            // color: theme('colors.yourSpecificColor'), // change global color scheme
+            'h1, h2, h3, h4, h5, h6': {
+              '> a': {
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                // '&:hover': { 
+                //   color: '#F7941E',
+                // },
+              },
+            },
+            pre: {
+              maxHeight: '600px'
+            }
+            // a: {
+            //   color: '#03989E',
+            //     '&:hover': { // could be any. It's like extending css selector
+            //       color: '#F7941E',
+            //     },
+            // },
+          },
+        },
+        sm: { // and this is for prose-sm. 
+          css: {},
+        },
+      },
     },
-  },
+
+    },
   plugins: [require("@tailwindcss/typography")],
 };

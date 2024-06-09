@@ -8,8 +8,6 @@ tags:
   - Health
 ---
 
-# The Magic of Morning Routines - How to Start Your Day Right
-
 ## Introduction
 Introduction to the importance of a structured morning routine for a successful and energized day.
 

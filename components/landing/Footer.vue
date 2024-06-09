@@ -1,6 +1,6 @@
 <template>
   <footer class="pt-10 bg-darkBlue">
-    <LandingContainer>
+    <LayoutContainer>
       <div class="mx-auto max-w-screen-xl">
         <div class="md:flex md:justify-between">
           <!-- LOGO -->
@@ -84,7 +84,7 @@
 
         </div>
       </div>
-    </LandingContainer>
+    </LayoutContainer>
   </footer>
 </template>
 

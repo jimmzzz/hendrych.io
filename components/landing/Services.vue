@@ -50,7 +50,7 @@ const services = [
 <template>
   <div class="pt-16 md:pt-24">
     <div>
-      <UIHeading :level="1" class="lg:tracking-tight">{{ translations.title }}</UIHeading>
+      <UIHeading :level="1" class="lg:tracking-tight max-w-[735px]">{{ translations.title }}</UIHeading>
       <UIParagraph size="lg" className="mt-4 max-w-[850px]">
         {{ translations.description }}
       </UIParagraph>

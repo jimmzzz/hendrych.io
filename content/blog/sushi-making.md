@@ -8,8 +8,6 @@ tags:
   - Culinary Arts
 ---
 
-# Discovering the Art of Sushi Making
-
 ## Introduction
 Overview of sushi as a culinary art and its cultural significance.
 

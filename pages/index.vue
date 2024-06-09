@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <LandingContainer>
+  <LayoutContainer>
     <LandingHero id="home" />
     <!-- <LandingClients /> -->
     <!-- TODO: clients -->
@@ -16,5 +16,5 @@ definePageMeta({
 
     <!-- <LandingNewsletter /> -->
     <!-- <LandingCta /> -->
-  </LandingContainer>
+  </LayoutContainer>
 </template>

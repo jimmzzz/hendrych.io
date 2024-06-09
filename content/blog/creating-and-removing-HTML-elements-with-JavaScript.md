@@ -1,7 +1,7 @@
 ---
 title: 'Creating and removing HTML elements with JavaScript'
 description: 'In my second article in a series dedicated to DOM API, I will focus on adding and removing HTML elements from the Document Object Model (DOM). These actions are the bread and butter for creating…'
-image: 'img/blog/green.jpg'
+image: 'https://res.cloudinary.com/dkygppaig/image/upload/v1708463007/hendrych.io/blog/creating-removing-elements.png'
 tags: [ HTML, CSS, JavaScript, DOM Manipulation, Beginner friendly ]
 author: 'Tomáš Hendrych'
 createdAt: '2024-01-26T12:00:00+01:00'

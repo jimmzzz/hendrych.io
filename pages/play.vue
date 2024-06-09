@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <LandingContainer class="py-20">
+  <LayoutContainer class="py-20">
 
     <UIHeading :level="1" class="mb-8"> Typography </UIHeading>
     <hr class="my-6">
@@ -77,5 +77,5 @@ definePageMeta({
       <UIButton size="md" styleName="muted" class="mr-6"> Secondary </UIButton>
       <UIButton size="sm" styleName="muted" class="mr-6"> Secondary </UIButton>
     </div>
-  </LandingContainer>
+  </LayoutContainer>
 </template>

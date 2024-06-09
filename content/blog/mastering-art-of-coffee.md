@@ -1,6 +1,6 @@
 ---
 title: Mastering the Art of Coffee Brewing at Home
-image: img/blog/scratch.jpg
+image: img/blog/green.jpg
 description: Discover the techniques and tips for brewing exceptional coffee right in your own kitchen.
 createdAt: '2024-03-23T09:00:00+01:00'
 tags:
@@ -8,8 +8,6 @@ tags:
   - Brewing Techniques
   - Lifestyle
 ---
-
-# Mastering the Art of Coffee Brewing at Home
 
 ## Introduction
 Introduce the topic of home coffee brewing and its growing popularity among coffee enthusiasts worldwide.

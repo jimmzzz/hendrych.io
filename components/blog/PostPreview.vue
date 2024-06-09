@@ -25,6 +25,7 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
+import { formatDate } from '../../utils/date';
 
 const props = defineProps({
     post: {
@@ -45,20 +46,11 @@ const articleDate = computed(() => {
 
     return updatedAt ? formatDate(updatedAt) : formatDate(createdAt)
 })
-
-const formatDate = (dateString: string) => {
-    const date = new Date(Date.parse(dateString));
-    return date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-    });
-};
 </script>
 
 <style scoped>
 .post-preview {
-    @apply flex flex-col max-w-sm overflow-hidden;
+    @apply flex flex-col md:max-w-sm overflow-hidden;
 
     &__image {
         @apply w-full h-[156px] object-cover rounded-md;
