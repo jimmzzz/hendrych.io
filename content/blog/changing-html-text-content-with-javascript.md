@@ -5,6 +5,7 @@ image: 'img/blog/leaves.jpg'
 tags: [HTML, CSS, JavaScript, DOM Manipulation, Beginner friendly]
 author: 'Tomáš Hendrych'
 createdAt: '2023-12-29T09:00:00+01:00'
+updatedAt: '2023-12-29T09:00:00+01:00'
 ---
 
 This article is focused on updating the content of webpage with the help of JavaScript. We are going to manipulate **Document Object Model (DOM)**, which represents the structure of an HTML document.

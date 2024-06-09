@@ -5,7 +5,7 @@
         <div class="flex w-full lg:w-auto items-center justify-between">
           <!-- mobile logo & logo -->
           <a href="/" class="text-lg lg:hidden">
-            <span class="font-bold text-slate-800">hendrych.</span> {{ scrolled }}
+            <span class="font-bold text-slate-800">hendrych.</span>
             <span class="text-primary-500">io</span>
           </a>
           <Logo class="hidden lg:flex" />

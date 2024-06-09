@@ -13,7 +13,7 @@
 <script setup lang="ts">
 
 interface LogoProps {
-    variant: 'dark' | 'light'
+    variant?: 'dark' | 'light'
 }
 
 const props = withDefaults(defineProps<LogoProps>(), {

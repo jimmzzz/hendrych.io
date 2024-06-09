@@ -1,10 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+const seoData = {
+  name: 'Hendrych.io',
+  title: 'Tomáš Hendrych | Freelance frontend developer (JS/TS, VUE.js)',
+  description: `Freelance web developer from Prague. Contact me for front-end engineering work with JavaScript/TypeScript, Vue.js, HTML, CSS, and more.`,
+  image: `/img/ogImage.png`,
+  ogTitle: 'Tomáš Hendrych | Freelance frontend developer',
+};
+
 export default defineNuxtConfig({
   app: {
     head: {
-      htmlAttrs: {
-        lang: 'en'
-      }
+      // htmlAttrs: {
+      //   lang: 'en'
+      // }
     }
   },
   devtools: { enabled: true },
@@ -15,14 +24,28 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["nuxt-icon", "@nuxt/content", "@nuxtjs/tailwindcss", "@nuxt/image"],
+  modules: [
+    "nuxt-icon",
+    "@nuxt/content",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    "@nuxtjs/seo"
+  ],
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
   },
   content: {
+    documentDriven: true,
     highlight: {
       theme: 'material-theme-ocean'
     },
+  },
+  // NUXT SEO config
+  site: {
+    url: 'https://hendrych.io',
+    name: seoData.name,
+    description: seoData.description,
+    defaultLocale: 'en',
   },
 });

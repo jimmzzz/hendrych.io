@@ -1,3 +1,7 @@
+# TODO
+
+- sitemap blogpost routes doesnt work https://nuxtseo.com/sitemap/integrations/content
+
 # Nuxtship - Nuxt SAAS Starter Website Template
 
 Nuxtship is a free starter nuxt website template for saas, startups, marketing websites & landing pages. Built with Nuxt & TailwindCSS.
