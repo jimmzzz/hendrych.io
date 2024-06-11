@@ -1,5 +1,5 @@
 <script setup>
-
+import { LINKEDIN_URL } from '../../utils/links';
 </script>
 
 <template>
@@ -24,9 +24,11 @@
           <LandingLink href="https://github.com/Gr33nW33n/nuxtship-template" target="_blank" rel="noopener">
             Download CV
           </LandingLink>
-          <LandingLink size="lg" styleName="outline" rel="noopener"
-            href="https://github.com/Gr33nW33n/nuxtship-template" target="_blank">
-            View Repo
+          <LandingLink size="lg" styleName="outline" rel="noopener" :href="LINKEDIN_URL" target="_blank">
+            <div class="flex justify-center items-center">
+              <Icon class="text-gray-400 w-5 h-5 mr-2" name="uil:linkedin" />
+              LinkedIn profile
+            </div>
           </LandingLink>
         </div>
 

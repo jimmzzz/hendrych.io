@@ -1,6 +1,7 @@
 # TODO
 
-- sitemap blogpost routes doesnt work https://nuxtseo.com/sitemap/integrations/content
+- schema setup (check hendrych-website repo)
+- og-images
 
 # Nuxtship - Nuxt SAAS Starter Website Template
 

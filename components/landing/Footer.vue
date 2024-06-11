@@ -56,8 +56,8 @@
                 <li class="mb-4">
                   <div class="flex gap-2">
                     <Icon name="heroicons:envelope-solid" width="26" height="26" />
-                    <a :href="`mailto:${myEmailAdress}`">
-                      {{ myEmailAdress }}
+                    <a :href="`mailto:${EMAIL_ADDRESS}`">
+                      {{ EMAIL_ADDRESS }}
                     </a>
                   </div>
                 </li>
@@ -90,7 +90,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { navigationLinks, socialLinks, myEmailAdress } from "./../utils/links";
+import { navigationLinks, socialLinks, EMAIL_ADDRESS } from "./../utils/links";
 
 const translations = computed(() => {
   return {

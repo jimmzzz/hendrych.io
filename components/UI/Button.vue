@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface Props {
+    tag?: string;
     href: string;
     size?: 'lg' | 'md' | 'sm';
     block?: boolean;
@@ -11,6 +12,7 @@ interface Props {
 withDefaults(defineProps<Props>(), {
     size: 'lg',
     styleName: 'primary',
+    tag: 'button'
 });
 
 const sizes = {
@@ -28,12 +30,12 @@ const styles = {
 </script>
 
 <template>
-    <NuxtLink :href="href" :class="[
+    <component :is="tag" :href="href" :class="[
         'rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 font-medium',
         block && 'w-full',
         sizes[size],
         styles[styleName],
     ]">
         <slot />
-    </NuxtLink>
+    </component>
 </template>

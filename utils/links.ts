@@ -12,7 +12,16 @@ export interface IconLink extends NavigationLink {
     alt?: string;
 }
 
-export const myEmailAdress = "info@hendrych.io"
+// CONTACT
+export const EMAIL_ADDRESS = 'info@hendrych.io'
+export const PHONE_NUMBER = '+420 607 737 765'
+export const PHYSICAL_ADDRESS = 'Prague, Czech republic'
+
+/// SOCIALS
+export const LINKEDIN_URL = 'https://cz.linkedin.com/in/tomáš-hendrych-cz'
+export const INSTAGRAM_URL = 'https://www.instagram.com/frontendBlond'
+export const GITHUB_URL = 'https://github.com/jimmzzz'
+export const X_URL = 'https://x.com/frontendBlond'
 
 export const navigationLinks: NavigationLink[] = [
     { id: 'home', label: 'Home', path: '/' },
@@ -30,9 +39,10 @@ export const navigationLinksBlog: NavigationLink[] = [
 ]
 
 export const socialLinks: IconLink[] = [
-    { id: 'linkedIn', icon: 'LinkedIn', label: 'LinkedIn', path: 'https://cz.linkedin.com/in/tomáš-hendrych-cz'},
-    { id: 'instagram', icon: 'Instagram', label: 'Instagram', path: 'https://instagram.com/frontendBlond'},
-    { id: 'github', icon: 'Github', label: 'Github', path: 'https://github.com/jimmzzz' },
+    { id: 'linkedIn', icon: 'LinkedIn', label: 'LinkedIn', path: LINKEDIN_URL},
+    { id: 'instagram', icon: 'Instagram', label: 'Instagram', path: INSTAGRAM_URL},
+    { id: 'github', icon: 'Github', label: 'Github', path: GITHUB_URL },
+    { id: 'x', icon: 'pajamas:twitter', label: 'X (Twitter)', path: X_URL },
 ]
 
 

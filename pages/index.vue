@@ -12,9 +12,11 @@ definePageMeta({
     <LandingServices id="services" />
     <LandingAbout id="aboutMe" />
     <LandingTechStack />
-    <LandingProjects id="projects" />
 
+    <!-- <LandingProjects id="projects" /> -->
+
+    <LandingContactSection id="contact" />
+    <!-- <LandingSectionhead></LandingSectionhead> -->
     <!-- <LandingNewsletter /> -->
-    <!-- <LandingCta /> -->
   </LayoutContainer>
 </template>

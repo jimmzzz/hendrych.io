@@ -1,5 +1,5 @@
 <template>
-  <main class="grid lg:grid-cols-2 place-items-center pt-16 mb-8">
+  <main class="grid lg:grid-cols-2 place-items-center md:pt-16 mb-8">
     <div class="pb-18 md:order-1 hidden md:block">
       <img class="relative left-12" src="~/assets/img/hero-photo.png" alt="Starship starts the engine" loading="eager"
         format="avif" width="618" height="604" />
@@ -20,17 +20,12 @@
       </UIParagraph>
 
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
-        <!-- <UIButton>
-          <NuxtLink :to="{ path: '/', hash: '#contact' }">
+
+        <NuxtLink :to="{ path: '/', hash: '#contact' }">
+          <UIButton>
             Contact me
-          </NuxtLink>
-        </UIButton> -->
-        <LandingLink href="https://github.com/Gr33nW33n/nuxtship-template" target="_blank" rel="noopener">
-          Contact Me
-        </LandingLink>
-        <LandingLink size="lg" styleName="outline" rel="noopener" href="https://github.com/Gr33nW33n/nuxtship-template"
-          target="_blank">View Repo
-        </LandingLink>
+          </UIButton>
+        </NuxtLink>
       </div>
 
       <div class="my-4 mb-10 flex justify-center md:mb-0 md:mt-6 md:justify-start dark:text-white text-gray-800 gap-6">
