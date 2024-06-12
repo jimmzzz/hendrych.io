@@ -14,9 +14,12 @@
       </UIHeading>
 
       <UIParagraph size="lg" className="mt-4">
-        Nuxtship is a starter template for startups, marketing websites &
+        <!-- Nuxtship is a starter template for startups, marketing websites &
         landing pages.<wbr /> Built with Nuxt & TailwindCSS. You can quickly
-        create any website with this starter.
+        create any website with this starter. -->
+
+        Frontend developer from Prague. Building dynamic websites and apps using Vue.js, Nuxt.js and TailwindCSS,
+        ensuring top-notch design and functionality.
       </UIParagraph>
 
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
