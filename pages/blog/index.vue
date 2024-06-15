@@ -39,7 +39,7 @@ const query: QueryBuilderParams = {
     //     { layout: 'article' }
     // ],
     limit: 10,
-    sort: [{ date: -1 }]
+    sort: [{ createdAt: -1 }]
 }
 
 </script>
