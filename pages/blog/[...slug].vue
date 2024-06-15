@@ -14,12 +14,13 @@
                     {{ tag }}
                 </div>
 
-                <NuxtImg class="w-full h-72 object-cover object-center rounded-xl mb-8" :src="data?.image" />
+                <NuxtImg class="w-full md:h-72 object-cover object-center rounded-xl mb-8" :src="data?.image" />
             </div>
 
-
-
+            <!-- ARTICLE renderer -->
             <ContentRenderer :value="data" />
+
+            <!-- TODO: footer for blog with socials links -->
         </div>
     </ContentQuery>
 </template>
