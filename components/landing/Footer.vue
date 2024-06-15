@@ -24,8 +24,8 @@
           <!-- md:grid-cols-3 -->
           <div class="grid grid-cols-2 sm:gap-0 md:grid-cols-footer">
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Sitemap</h2>
-              <ul class="text-gray-600 dark:text-gray-400">
+              <h2 class="mb-6 text-sm font-semibold uppercase text-white">Sitemap</h2>
+              <ul class="dark:text-gray-400">
                 <li v-for="link in navigationLinks.slice(0, navigationLinks.length - 1)" :id="`${link.id}-footer`"
                   class="mb-4">
                   <nuxt-link :to="{ path: link.url, hash: link.hash }" class="hover:underline">
@@ -35,8 +35,8 @@
               </ul>
             </div>
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow me</h2>
-              <ul class="text-gray-600 dark:text-gray-400">
+              <h2 class="mb-6 text-sm font-semibold uppercase text-white">Follow me</h2>
+              <ul class="dark:text-gray-400">
                 <li v-for="link in socialLinks" class="mb-4">
                   <nuxt-link :to="link.url" class="hover:underline">
                     {{ link.label }}
@@ -45,8 +45,8 @@
               </ul>
             </div>
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
-              <ul class="text-gray-600 dark:text-gray-400">
+              <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact</h2>
+              <ul class="dark:text-gray-400">
                 <li class="mb-4">
                   <div class="flex gap-2">
                     <Icon name="solar:phone-bold" width="26" height="26" />

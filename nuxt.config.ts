@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 const seoData = {
-  name: 'Hendrych.io',
+  name: 'Hendrych.io | Frontend developer',
   title: 'Tomáš Hendrych | Freelance frontend developer (JS/TS, VUE.js)',
   description: `Freelance web developer from Prague. Contact me for front-end engineering work with JavaScript/TypeScript, Vue.js, HTML, CSS, and more.`,
   image: `/img/ogImage.png`,

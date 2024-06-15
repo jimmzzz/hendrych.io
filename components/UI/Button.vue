@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Props {
     tag?: string;
-    href: string;
+    href?: string;
     size?: 'lg' | 'md' | 'sm';
     block?: boolean;
     styleName?: 'outline' | 'primary' | 'inverted' | 'muted';
