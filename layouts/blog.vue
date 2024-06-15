@@ -4,5 +4,6 @@
     <UIBreadCrumb v-if="$route.path !== '/blog'" />
     <slot></slot>
   </main>
+  <ConsentPanel />
   <LandingFooter></LandingFooter>
 </template>

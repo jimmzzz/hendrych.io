@@ -6456,6 +6456,16 @@ nuxi@^3.10.0:
   optionalDependencies:
     fsevents "~2.3.3"
 
+nuxt-gtag@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npmjs.org/nuxt-gtag/-/nuxt-gtag-2.0.6.tgz"
+  integrity sha512-KjHujiwX4mtmgtHLMQB25NP3vxAuzsEqmZDkUoq9ZUSRLXly6FaPT97BTM4slr72eSfaoPGDeFyFxVvJhN4LVg==
+  dependencies:
+    "@nuxt/kit" "^3.11.2"
+    defu "^6.1.4"
+    pathe "^1.1.2"
+    ufo "^1.5.3"
+
 nuxt-icon@^0.6.10:
   version "0.6.10"
   resolved "https://registry.npmjs.org/nuxt-icon/-/nuxt-icon-0.6.10.tgz"

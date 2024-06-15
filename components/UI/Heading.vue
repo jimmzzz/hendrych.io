@@ -3,6 +3,7 @@ import { computed } from 'vue';
 
 interface Props {
     level: 1 | 2 | 3 | 4 | 5 | 6 | 'display' | 'subHeading';
+    tag?: string;
 }
 
 const props = defineProps<Props>()
@@ -23,6 +24,8 @@ const sizes = {
 };
 
 const getTag = computed(() => {
+    if (props.tag) return props.tag
+
     if (props.level === 'display') {
         return 'h1'
     }

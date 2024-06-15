@@ -29,11 +29,20 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
-    "@nuxtjs/seo"
+    "@nuxtjs/seo",
+    "nuxt-gtag"
   ],
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
+  },
+  runtimeConfig: {
+    public: {
+      GA_ID: process.env.NUXT_PUBLIC_GTAG_ID,
+    },
+  },
+  gtag: {
+    enabled: false,
   },
   content: {
     documentDriven: true,
