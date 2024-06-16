@@ -21,9 +21,10 @@ import { LINKEDIN_URL } from '../../utils/links';
         </UIParagraph>
 
         <div class="flex flex-col sm:flex-row gap-3">
-          <LandingLink href="https://github.com/Gr33nW33n/nuxtship-template" target="_blank" rel="noopener">
+          <!-- TODO: CV download -->
+          <!-- <LandingLink href="" target="_blank" rel="noopener">
             Download CV
-          </LandingLink>
+          </LandingLink> -->
           <LandingLink size="lg" styleName="outline" rel="noopener" :href="LINKEDIN_URL" target="_blank">
             <div class="flex justify-center items-center">
               <Icon class="text-gray-400 w-5 h-5 mr-2" name="uil:linkedin" />

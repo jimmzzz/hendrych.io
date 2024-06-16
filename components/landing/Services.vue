@@ -63,7 +63,7 @@ const services = [
           <Icon class='text-white' :name='item.icon' />
         </div>
         <div>
-          <UIHeading :level="6" class="font-semibold">{{ item.title }}</UIHeading>
+          <UIHeading :level="6" :tag="'div'" class="font-semibold">{{ item.title }}</UIHeading>
           <UIParagraph styleName="relaxed" className="mt-2">
             {{ item.description }}
           </UIParagraph>

@@ -25,7 +25,7 @@
           <div class="grid grid-cols-2 sm:gap-0 md:grid-cols-footer">
             <div>
               <h2 class="mb-6 text-sm font-semibold uppercase text-white">Sitemap</h2>
-              <ul class="dark:text-gray-400">
+              <ul class="text-gray-400">
                 <li v-for="link in navigationLinks.slice(0, navigationLinks.length - 1)" :id="`${link.id}-footer`"
                   class="mb-4">
                   <nuxt-link :to="{ path: link.url, hash: link.hash }" class="hover:underline">
@@ -36,18 +36,28 @@
             </div>
             <div>
               <h2 class="mb-6 text-sm font-semibold uppercase text-white">Follow me</h2>
-              <ul class="dark:text-gray-400">
+              <ul class="text-gray-400">
                 <li v-for="link in socialLinks" class="mb-4">
-                  <nuxt-link :to="link.url" class="hover:underline">
+                  <nuxt-link :to="link.path" :target="'_blank'" class="hover:underline">
                     {{ link.label }}
                   </nuxt-link>
                 </li>
               </ul>
             </div>
+
             <div>
               <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact</h2>
-              <ul class="dark:text-gray-400">
-                <li class="mb-4">
+
+              <ul class="text-gray-400">
+
+                <li v-for="item in contactItems" :key="item.id" class="mb-4">
+                  <div class="flex gap-2">
+                    <Icon :name="item.icon" width="26" height="26" />
+                    <span>{{ item.label }}</span>
+                  </div>
+                </li>
+
+                <!-- <li class="mb-4">
                   <div class="flex gap-2">
                     <Icon name="solar:phone-bold" width="26" height="26" />
                     <span>+ 420 607 737 765</span>
@@ -66,19 +76,21 @@
                     <Icon name="carbon:location-filled" width="26" height="26" />
                     <span class="block max-w-44">Prague, Czech republic</span>
                   </div>
-                </li>
+                </li> -->
+
               </ul>
+
             </div>
           </div>
         </div>
 
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-10" />
+        <hr class="my-6 sm:mx-auto border-gray-700 lg:mt-10" />
 
         <!-- Copyright section -->
         <div class="sm:flex sm:items-center sm:justify-between">
           <UIParagraph size="sm" styleName="relaxed" className="!text-gray-400 pb-6">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ new Date().getFullYear() }}
-              <span>Tomáš Hendrych</span>. All Rights Reserved.
+            <span class="text-sm sm:text-center text-gray-400">© {{ new Date().getFullYear() }}
+              {{ translations.footerCompanyName }} {{ translations.footerRightsReserved }}
             </span>
           </UIParagraph>
 
@@ -90,11 +102,21 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { navigationLinks, socialLinks, EMAIL_ADDRESS } from "./../utils/links";
+import { navigationLinks, socialLinks, PHYSICAL_ADDRESS, PHONE_NUMBER, EMAIL_ADDRESS } from "./../utils/links";
+
+const contactItems = computed(() => {
+  return [
+    { label: PHONE_NUMBER, icon: 'uil:phone', href: `tel:${PHONE_NUMBER.replace(' ', '')}` },
+    { label: EMAIL_ADDRESS, icon: 'uil:envelope', href: `mailto:${EMAIL_ADDRESS}` },
+    { label: PHYSICAL_ADDRESS, icon: 'uil:map-marker' },
+  ]
+})
 
 const translations = computed(() => {
   return {
-    description: `Frontend engineer from Prague specializing in designing and creating highly interactive websites and web applications. Focused on building responsive, accessible and performant websites with SEO in mind. Currently, I’m working on building UI components for design system at Phrase.com`
+    description: `Frontend engineer from Prague specializing in designing and creating highly interactive websites and web applications. Focused on building responsive, accessible and performant websites with SEO in mind. Currently, I’m working on building UI components for design system at Phrase.com`,
+    footerCompanyName: 'Tomáš Hendrych.',
+    footerRightsReserved: 'All Rights Reserved.',
   };
 });
 </script>

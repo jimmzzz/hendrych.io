@@ -17,7 +17,7 @@
         <div class="mt-5">
           <div v-for="item in contactItems" :key="item.label" class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" :name="item.icon" />
-            <a :href="item.href">{{ item.label }}</a>
+            <component :is="item.href ? 'a' : 'span'" :href="item.href">{{ item.label }}</component>
           </div>
         </div>
       </div>
