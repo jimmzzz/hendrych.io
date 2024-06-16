@@ -1,6 +1,6 @@
 ---
 title: The scroll indicator
-image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*e3gESHJy4N-uWXVZg7DaGQ.png
+image: img/blog/scroll-indicator.png
 description: Discover how urban gardening can beautify city spaces and provide sustainable food sources.
 createdAt: '2024-03-01T12:00:00+01:00'
 tags:
