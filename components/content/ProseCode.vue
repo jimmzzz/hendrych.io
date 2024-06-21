@@ -3,13 +3,18 @@
         <section class="info-panel">
             <div class="info-panel__left">
                 <Icon :name="iconName" class="info-panel__icon" />
-                <!-- <span class="info-panel__language" v-if="props.language">{{ langText }}</span> -->
                 <span class="info-panel__file-name" v-if="props.filename">{{ fileNameText }}</span>
             </div>
 
-            <button class="flex gap-1" @click="navigator.clipboard.writeText(props.code)">
-                <Icon name="ph:clipboard" class="info-panel__icon" />
-                Copy
+            <button class="flex gap-1" @click="copyToClipboard">
+                <div v-if="textCopied" class="flex">
+                    <Icon name="carbon:checkmark-filled" class="info-panel__icon text-green-500 mr-1" />
+                    <span>Copied successfully</span>
+                </div>
+                <div v-else class="flex">
+                    <Icon name="ph:clipboard" class="info-panel__icon mr-1" />
+                    Copy code
+                </div>
             </button>
         </section>
         <slot />
@@ -60,12 +65,24 @@ const langMapTable = {
     css: 'css',
     js: 'javascript',
     javascript: 'logos:javascript',
-
     sass: 'Sass',
     vue: 'logos:vue',
     md: 'logos:markdown',
     nodejs: 'logos:node-js-icon',
+}
 
+const textCopied = ref(false)
+
+const copyToClipboard = () => {
+    navigator.clipboard.writeText(props.code).then(function () {
+        textCopied.value = true
+        setTimeout(() => {
+            textCopied.value = false
+        }, 3000);
+    }, function (err) {
+        console.error('Async: Could not copy text: ', err);
+    }
+    );
 }
 
 const langText = computed(() => {
