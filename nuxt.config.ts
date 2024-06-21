@@ -49,6 +49,14 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'material-theme-ocean'
     },
+    markdown: {
+      prism: {
+        theme: false, // Disable the default Prism theme if you're using your own styles
+      },
+    },
+    extendParser: {
+      code: '~/components/content/ProseCode.vue',
+    },
   },
   // NUXT SEO config
   site: {

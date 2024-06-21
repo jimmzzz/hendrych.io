@@ -31,7 +31,7 @@ We are going to build two components:
 But before we start to implement these two components we need to create some basic HTML structure. We will create a few headings and paragraphs to make our page long enough to be scrollable.
 > **Small tip:** If need to generate some dummy text (lorem ipsum), most of the modern IDEs (VS code, idea, …) have got built-in feature or extension called [**Emmet](https://emmet.io/). **The Emmet offers a lot of features for generating boilerplate HTML and CSS. For generating dummy text in the HTML file just write “**lorem”** and press the tab and random dummy text magically appears. Or you can even specify the number of words with e.g. “**lorem250**”.
 
-```html
+```html [index] {4-6,7} meta-info=val
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -92,7 +92,7 @@ The code above will be are starting point for our HTML structure. I also importe
 
 Then we will create our CSS file with some starting CSS declarations. On the first line, We import font called “**Poppins**” from** [fonts.google.com](https://fonts.google.com/)** . Feel free to copy & paste the code below, which contains just really basic styling rules.
 
-```css
+```css [styles]
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
@@ -128,7 +128,7 @@ Let's build our header component. There is the important prerequisite to make th
 
 First of all, we will create the HTML structure of our header, all will be wrapped in the nav element. Then we create the wrapper element, that will hold two sides. The left side will include the **logo** and **company** **name. **The right side will be dedicated to page links.
 
-```html
+```html [index]
 <nav class="header">
    <div class="header__wrapper container">
       <h2 class="header__left">
@@ -151,7 +151,7 @@ First of all, we will create the HTML structure of our header, all will be wrapp
 
 Now, we need to style our header. The most important thing is in .header class declaration. As I already mentioned, the position must be set to **fixed **and the top property set to **0**.
 
-```css
+```css [styles]
 /* HEADER styles */
 .header {
   position: fixed;
@@ -192,7 +192,7 @@ Now, we need to style our header. The most important thing is in .header class d
 
 Our scroll indicator component will be placed directly underneath the fixed header. We will add our indicator at the bottom of our header component. It will be just a div .indicator-track . It is a horizontal line occupying the whole width of the screen from left to right. When the page is not scrolled down at all the track, will whole visible. Inside our track we will place our actual indicator/progress bar.
 
-```html
+```html [index]
 <nav class="header">
    <div class="header__wrapper container">
       ...
@@ -206,7 +206,7 @@ Our scroll indicator component will be placed directly underneath the fixed head
 
 Then we a add few lines of CSS and we should be able to see our track at the bottom of our fixed navbar, but the indicator will be not visible because we set it his width: 0.
 
-```css
+```css [styles]
 .indicator__track {
   width: 100%;
   height: 8px;
@@ -245,7 +245,7 @@ Last but not least, We have to change CSS property width dynamically of the indi
 1. Change CSS property width of the indicator bar based on scroll
 > The all dimensions are take from root element document.documentElement . But of course, this can be used only for certain element and its children.
 
-```js
+```js [index]
 const updateIndicator = () => {
   // 1) Get current position of the scroll in pixels
   const winScroll = document.documentElement.scrollTop;

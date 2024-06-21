@@ -5,3 +5,19 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* .prose pre > code {
+} */
+
+/* Styling only for inline code block */
+.prose code:not(pre > code) {
+    @apply bg-purple-100 text-primary-600 font-mono font-bold me-1 p-1 rounded border-gray-500 border-[0.5px];
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
+    content: "";
+}
+
+  .prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: "";
+}
