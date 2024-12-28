@@ -13,6 +13,14 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '480px',  // Add an extra small breakpoint
+        sm: '640px',  // Retain the default
+        md: '768px',  // Retain the default
+        lg: '1024px', // Retain the default
+        xl: '1280px', // Retain the default
+        '2xl': '1536px', // Retain the default
+      },
       colors: {
         primary: {
             DEFAULT: '#A21CAF',
@@ -72,5 +80,14 @@ export default {
     },
 
     },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    function ({ addBase, theme }) {
+      addBase({
+        ':root': {
+          '--screen-xl': theme('screens.xl'),
+        },
+      });
+    },
+  ],
 };

@@ -18,7 +18,7 @@ export const PHONE_NUMBER = '+420 607 737 765'
 export const PHYSICAL_ADDRESS = 'Prague, Czech republic'
 
 /// SOCIALS
-export const LINKEDIN_URL = 'https://cz.linkedin.com/in/tomáš-hendrych-cz'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/tomas-hendrych-cz/'
 export const INSTAGRAM_URL = 'https://www.instagram.com/frontendBlond'
 export const GITHUB_URL = 'https://github.com/jimmzzz'
 export const X_URL = 'https://x.com/frontendBlond'

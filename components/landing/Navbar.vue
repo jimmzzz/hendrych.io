@@ -27,7 +27,9 @@
           <ul class="flex flex-col lg:flex-row lg:gap-3">
             <li v-for="link in navLinks" :key="link.label">
               <!-- v-if="link.url !== '/blog'" -->
+              <!-- :class="{ 'active-nav-link': $route.hash === link.hash || (!$route.hash && !link.hash && link.path.length < 2) }" -->
               <nuxt-link aria-current="page" :to="{ path: link.path, hash: link.hash }"
+                :class="{ 'active-nav-link': `#${activeSection}` === link.hash }"
                 class="flex lg:px-3 py-2 text-gray-600 hover:text-primary-500"
                 @click.prevent="scrollToElement(link.id)">
                 {{ link.label }}
@@ -71,18 +73,29 @@ const props = withDefaults(defineProps<NavbarProps>(), {
 });
 
 const route = useRoute()
+const router = useRouter()
 const open = ref(false);
 const scrolled = ref(0)
+
+const sections = ['home', 'services', 'about-me', 'contact']
+const observer = ref<IntersectionObserver>()
+const activeSection = ref<string | null>(null)
 
 const navLinks = computed(() => {
   return String(route.name).includes('blog') ? navigationLinksBlog : navigationLinks
 })
 
 const scrollToElement = (id: string) => {
+  observer.value?.disconnect()
+  activeSection.value = id
+
   const element = document.getElementById(id);
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
+  setTimeout(() => {
+    initIntersectionObserver()
+  }, 600);
 };
 
 const toggleNavbarShadow = () => {
@@ -102,6 +115,38 @@ const calcScrollIndicator = () => {
   scrolled.value = Math.round((winScroll / height) * 100);
 }
 
+const initIntersectionObserver = () => {
+  const elements = sections.map(id => document.getElementById(id));
+  observer.value = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(async (entry) => {
+        if (entry.isIntersecting) {
+          updateActiveSection(entry.target.id)
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.5,
+    }
+  );
+
+  elements.forEach((section) => {
+    if (section) {
+      observer.value.observe(section)
+    }
+  });
+}
+
+const updateActiveSection = (sectionId: string) => {
+  if (activeSection.value !== sectionId) {
+    activeSection.value = sectionId;
+
+    // Update the URL without triggering a scroll
+    window.history.replaceState({}, '', `#${sectionId}`);
+  }
+}
+
 onMounted(() => {
   window.addEventListener('scroll', () => {
     if (route.name !== 'blog-slug') {
@@ -112,13 +157,29 @@ onMounted(() => {
       calcScrollIndicator()
     }
   });
+
+
+  // Intersection
+  initIntersectionObserver()
 });
 </script>
 
-<style scoped>
+<style>
 .indicator {
   transition: width 0.3s ease;
 
   @apply h-[4px] bg-primary-500;
+}
+
+@media (max-width: 1024px) {
+  .active-nav-link {
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+
+    @apply py-1 px-2 bg-primary-400 text-white inline-block rounded-xl my-[3px];
+  }
+}
+
+.active-nav-link {
+  @apply lg:min-h-[unset] lg:border-b-4 lg:border-b-primary-400 transition-all;
 }
 </style>
