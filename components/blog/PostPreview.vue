@@ -1,6 +1,12 @@
 <template>
     <NuxtLink :to="post._path" class="post-preview">
-        <img :src="post.image" alt="blog post image" class="post-preview__image">
+        <img v-if="post.image" :src="post.image" alt="blog post image" class="post-preview__image">
+        <BlogImagePlaceholder 
+            v-else 
+            :tag="post.tags[0]"
+            :title="post.title"
+            class="post-preview__image" 
+        />
         <div class="post-preview__text-wrapper">
             <div class="post-preview__title">
                 {{ post.title }}

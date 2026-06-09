@@ -1,20 +1,22 @@
 <template>
     <ContentQuery :path="$route.path" find="one" v-slot="{ data }">
-        <div class="prose max-w-[735px]">
+        <div class="blog-post prose">
 
 
-            <div class="not-prose">
-                <!-- <NuxtImg class="aspect-video object-fit object-center rounded-xl mb-6" :src="data?.image" /> -->
-                <UIHeading :level="1" class="text-5xl font-extrabold mt-8 mb-4"> {{ data?.title }} </UIHeading>
+            <div class="blog-post__header not-prose">
+                <UIHeading :level="1" class="blog-post__title"> {{ data?.title }} </UIHeading>
 
-                <span class="block mb-4 text-slate-600 text-sm">Published on {{ formatDate(data?.createdAt) }}</span>
+                <span class="blog-post__date">Published on {{ formatDate(data?.createdAt) }} / {{ data?.author }}</span>
 
-                <div v-for="tag in data.tags" :key="tag.id"
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-6">
+                <div
+                    v-for="tag in data.tags"
+                    :key="tag.id"
+                    class="blog-post__tag"
+                >
                     {{ tag }}
                 </div>
 
-                <NuxtImg class="w-full md:h-72 object-cover object-center rounded-xl mb-8" :src="data?.image" />
+                <NuxtImg v-if="data?.image" class="blog-post__image" :src="data?.image" />
             </div>
 
             <!-- ARTICLE renderer -->
@@ -33,4 +35,24 @@ definePageMeta({
 });
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.blog-post {
+    @apply max-w-[735px];
+}
+
+.blog-post__title {
+    @apply mt-8 mb-4 text-5xl font-extrabold leading-tight;
+}
+
+.blog-post__date {
+    @apply block mb-4 text-sm text-slate-600;
+}
+
+.blog-post__tag {
+    @apply inline-block mr-2 mb-6 rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700;
+}
+
+.blog-post__image {
+    @apply mb-8 h-auto w-full rounded-xl object-cover object-center md:h-72;
+}
+</style>

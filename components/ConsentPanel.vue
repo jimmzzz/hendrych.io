@@ -9,7 +9,7 @@
                 </div>
                 <div class="consent-panel__actions">
                     <UIButton @click="allowCookies">{{ translations.consentPanelButtonAccept }}</UIButton>
-                    <UIButton @click="reject">{{ translations.consentPanelButtonReject }}</UIButton>
+                    <UIButton styleName="muted" @click="reject">{{ translations.consentPanelButtonReject }}</UIButton>
                 </div>
             </LayoutContainer>
 
@@ -61,7 +61,7 @@ onBeforeMount(() => {
     @apply fixed w-full bottom-0 xl:bottom-5 xl:left-[50%] xl:translate-x-[-50%];
 
     &__container {
-        @apply flex flex-col xl:flex-row py-6 bg-slate-200 shadow-2xl shadow-primary-400 md:rounded-xl xl:p-8;
+        @apply flex flex-col xl:flex-row py-6 bg-gray-200 shadow-2xl shadow-primary-400 md:rounded-xl xl:p-8;
     }
 
     &__text-wrapper {

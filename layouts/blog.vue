@@ -1,6 +1,6 @@
 <template>
   <LandingNavbar layout="blog" />
-  <main class="lg:max-w-screen-lg 2xl:max-w-screen-xl mx-auto px-5">
+  <main class="lg:max-w-screen-lg 2xl:max-w-screen-xl mx-auto px-5 mb-16">
     <UIBreadCrumb v-if="$route.path !== '/blog'" />
     <slot></slot>
   </main>
