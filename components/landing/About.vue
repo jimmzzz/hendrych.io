@@ -15,9 +15,7 @@ import { LINKEDIN_URL } from '../../utils/links';
         <UIHeading :level="'subHeading'" class="mb-6"> About me</UIHeading>
         <UIHeading :level="2" class="mb-4"> My goal is develop your online assets and grow your business </UIHeading>
         <UIParagraph size="md" styleName="relaxed" className="mb-6 !text-black">
-          Hello! I'm a {{ new Date().getFullYear() - new Date(1992, 1, 1).getFullYear() }}-year-old self-taught Frontend Engineer from Prague, Czech Republic. My journey into the world
-          of technology has been anything but conventional. I got a master's Degree in Economics and International
-          relations, but if I look backward, it was the wrong direction and I did not like it at all.
+          Hello! I’m a {{ new Date().getFullYear() - new Date(1992, 1, 1).getFullYear() }}-year-old Frontend Engineer living in Prague, Czech Republic. I taught myself how to code after studying Economics and International Relations. I realized that field wasn't the right fit for me, so I switched to software development, and I haven't looked back since!
         </UIParagraph>
 
         <div class="flex flex-col sm:flex-row gap-3">

@@ -14,8 +14,7 @@
       </UIHeading>
 
       <UIParagraph size="lg" className="mt-4">
-        Frontend developer from Prague. Building dynamic websites and apps using Vue.js, Nuxt.js and TailwindCSS,
-        ensuring top-notch design and functionality.
+        Senior frontend developer from Prague. Building dynamic websites/apps using modern technologies like Vue, React, Nuxt, Tailwindcss and more. I leverage the coding AI tools to speed up the development process and deliver high-quality solutions.
       </UIParagraph>
 
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
@@ -38,7 +37,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue';
 import { socialLinks } from './../utils/links';
 
 const translations = computed(() => {

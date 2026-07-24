@@ -12,10 +12,11 @@
 
 <script setup lang="ts">
 const techStack = [
-  { label: 'html5', icon: 'html5' },
-  { label: 'css3', icon: 'css3' },
+  { label: 'HTML', icon: 'html5' },
+  { label: 'CSS3', icon: 'css3' },
   { label: 'JavaScript', icon: 'javascript' },
   { label: 'TypeScript', icon: 'typescript' },
+  { label: 'React', icon: 'react' },
   { label: 'Vue.js', icon: 'vuedotjs' },
   { label: 'Nuxt.js', icon: 'nuxtdotjs' },
   { label: 'Tailwindcss', icon: 'tailwindcss' },
@@ -25,5 +26,8 @@ const techStack = [
   { label: 'Gitlab', icon: 'gitlab' },
   { label: 'GitHub', icon: 'github' },
   { label: 'Figma', icon: 'figma' },
+  { label: 'Vite', icon: 'vite' },
+  { label: 'Cypress', icon: 'cypress' },
+  { label: 'Claude Code', icon: 'claudecode' },
 ]
 </script>
