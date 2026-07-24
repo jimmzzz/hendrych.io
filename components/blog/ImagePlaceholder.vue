@@ -15,6 +15,7 @@ defineProps<{
 
 const tagColors: Record<string, string> = {
     javascript: "#F7DF1E",
+    algorithms: "#4CAF50",
     css: "#1572B6",
     html: "#E34C26",
     typescript: "#3178C6",

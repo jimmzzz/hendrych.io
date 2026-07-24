@@ -4,8 +4,8 @@
 
             <LayoutContainer class="consent-panel__container">
                 <div class="consent-panel__text-wrapper">
-                    <UIHeading :level="4" :tag="'div'" class="pb-3">{{ translations.consentPanelTitle }}</UIHeading>
-                    <UIParagraph class="pb-6 xl:pb-3">{{ translations.consentPanelDescription }}</UIParagraph>
+                    <UIHeading :level="6" :tag="'div'" class="pb-1">{{ translations.consentPanelTitle }}</UIHeading>
+                    <UIParagraph class="pb-6 xl:pb-0">{{ translations.consentPanelDescription }}</UIParagraph>
                 </div>
                 <div class="consent-panel__actions">
                     <UIButton @click="allowCookies">{{ translations.consentPanelButtonAccept }}</UIButton>
@@ -61,7 +61,7 @@ onBeforeMount(() => {
     @apply fixed w-full bottom-0 xl:bottom-5 xl:left-[50%] xl:translate-x-[-50%];
 
     &__container {
-        @apply flex flex-col xl:flex-row py-6 bg-gray-200 shadow-2xl shadow-primary-400 md:rounded-xl xl:p-8;
+        @apply flex flex-col xl:flex-row py-6 bg-gray-200 shadow-2xl shadow-primary-400 md:rounded-xl xl:p-6;
     }
 
     &__text-wrapper {

@@ -1,11 +1,11 @@
 <template>
     <NuxtLink :to="post._path" class="post-preview">
         <img v-if="post.image" :src="post.image" alt="blog post image" class="post-preview__image">
-        <BlogImagePlaceholder 
-            v-else 
+        <BlogImagePlaceholder
+            v-else
             :tag="post.tags[0]"
             :title="post.title"
-            class="post-preview__image" 
+            class="post-preview__image"
         />
         <div class="post-preview__text-wrapper">
             <div class="post-preview__title">
@@ -30,7 +30,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
 import { formatDate } from '../../utils/date';
 
 const props = defineProps({
@@ -54,7 +53,7 @@ const articleDate = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .post-preview {
     @apply flex flex-col md:max-w-sm overflow-hidden;
 

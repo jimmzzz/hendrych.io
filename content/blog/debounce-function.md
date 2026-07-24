@@ -31,7 +31,7 @@ A debounce function is a programming technique used to limit the rate at which a
 
 ## Use cases for debouncing
 
-Debouncing is useful for optimizing performance and improving user experience in scenarios with rapid, repeated events, which could cause performance issues or unintended consequences if handled without control. 
+Debouncing is useful for optimizing performance and improving user experience in scenarios with rapid, repeated events, which could cause performance issues or unintended consequences if handled without control.
 
 Common use cases include:
 
@@ -46,21 +46,21 @@ There are many ways to implement a debounce function in JavaScript.
 
 Lets specify our input and output of the debounce function:
 
-- **Input**: 
-  - a function to be debounced and
+- **Input**:
+  - a function to be debounced
   - **delay time** in milliseconds
 
-- **Output**: 
+- **Output**:
   - a new debounced function
 
 
 ```js [index]
 function debounce(fn, delay) {
   let timer;
-  
+
   return function debounce(...args) {
     clearTimeout(timer);
-    
+
     timer = setTimeout(() => {
       fn(...args)
     }, delay)
