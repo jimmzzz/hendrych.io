@@ -21,10 +21,11 @@ const services = [
     icon: 'Brackets',
   },
   {
-    title: 'Cross-Browser Compatibility & Accessibility',
+    title: 'UI/UX quality & accessibility',
     description:
-      'Cross-browser compability ensure that website compatible with different browsers and works on different platforms and devices.',
-    icon: 'ph:browser',
+      'I focus on smooth user experience with intuitive navigation, practical keyboard shortcuts and accessibility standards, while ensuring cross-browser compatibility.',
+    icon: 'mdi:cursor-default-click-outline',
+
   },
   {
     title: 'Performance Optimization',
@@ -39,10 +40,10 @@ const services = [
     icon: 'Integration',
   },
   {
-    title: 'Analytics implementation',
+    title: 'AI-assisted development',
     description:
-      'Tracking business metrics on website is crucial for many companies. I can help you implement Google Analytics, HotJar and so on.',
-    icon: 'Analytics',
+      'I use Claude Code, Claude and Gemini in daily work to speed up research, prototyping and implementation while keeping code quality high.',
+    icon: 'Terminal',
   },
 ];
 </script>
