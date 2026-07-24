@@ -1,8 +1,15 @@
 <template>
   <main class="grid lg:grid-cols-2 place-items-center md:pt-16 mb-8">
     <div class="pb-18 md:order-1 hidden md:block">
-      <img class="relative left-12" src="~/assets/img/hero-photo.png" alt="Starship starts the engine" loading="eager"
-        format="avif" width="618" height="604" />
+      <img
+        class="relative left-12"
+        :src="heroPhoto"
+        alt="Starship starts the engine"
+        loading="eager"
+        fetchpriority="high"
+        width="618"
+        height="604"
+      />
     </div>
 
     <div class="relative self-start top-20">
@@ -38,14 +45,24 @@
 
 <script setup>
 import { computed } from 'vue';
+import heroPhoto from '~/assets/img/landing/hero-photo.webp';
 import { socialLinks } from './../utils/links';
+
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      href: heroPhoto,
+      fetchpriority: 'high'
+    }
+  ]
+})
 
 const translations = computed(() => {
   return {
     heroCtaContact: 'Contact me'
   }
 })
-
-const config = useRuntimeConfig()
 
 </script>

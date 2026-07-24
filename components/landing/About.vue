@@ -7,7 +7,7 @@ import { LINKEDIN_URL } from '../../utils/links';
     <!-- left -->
     <div class="flex flex-wrap lg:gap-28">
       <div class=" lg:flex-shrink-0">
-        <img src="~/assets/img/landing/about.png" alt="about-me-photo"
+        <img src="~/assets/img/landing/about.webp" alt="about-me-photo"
           class="block mb-6 lg:mb-0 max-w-[330px] lg:max-w-full">
       </div>
       <!-- right -->
