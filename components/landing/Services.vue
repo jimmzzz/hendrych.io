@@ -2,8 +2,8 @@
 
 const translations = {
   title: 'Unlock Your Business Potential With My Services',
-  description: `Offer a range of frontend development services to help you succeed online. From responsive design to website
-      optimization, i'm here to help you create a website that not only looks great, but also performs flawlessly on any
+  description: `I offer a range of frontend development services to help you succeed online. From responsive design to website
+      optimization, I'm here to help you create a website that not only looks great but also performs flawlessly on any
       device.`
 }
 
@@ -17,7 +17,7 @@ const services = [
   {
     title: 'Web app development (JavaScript)',
     description:
-      'Build highly interactive web apps, ranging from a basic online forms to more complex applications such as CRM system, ecommerce platform ect.',
+      'Build highly interactive web apps, ranging from basic online forms to more complex applications such as CRM systems and ecommerce platforms.',
     icon: 'Brackets',
   },
   {
@@ -30,13 +30,13 @@ const services = [
   {
     title: 'Performance Optimization',
     description:
-      'Optimize websites and applications for better performance, Faster page loading time improves user experience',
+      'Optimize websites and applications for better performance. Faster page loading improves user experience.',
     icon: 'Gear',
   },
   {
     title: 'Integration with Backend Systems',
     description:
-      'Connect your application to external systems and API. So your application will be able send & receive data.',
+      'Connect your application to external systems and APIs so your application can send and receive data.',
     icon: 'Integration',
   },
   {

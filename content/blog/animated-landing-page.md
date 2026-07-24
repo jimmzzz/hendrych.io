@@ -383,7 +383,7 @@ Finally, we will call this function at the bottom of the existing `onMouseOver` 
 
 ```js [index]
 function onMouseOver(e) {
-  // previous code ommited
+  // previous code omitted
 
   setBackgroundImage(e.target.id);
 }
@@ -397,7 +397,7 @@ We can start working on the last main section of this tutorial. We will create a
 Additionally, we will update this section as the user mouses over different navigation elements.
 In other words, the UI will be updated accordingly based on user interaction.
 
-Lets move to our HTML structure. Inside our `.grid-container` we already got wrapping element with class `.right` and here we place our article. Our HTML for this section consist of wrappping `<article>` element which contains a nested heading element and a few paragraphs. Feel free to copy this with placeholder text.
+Let's move to our HTML structure. Inside our `.grid-container`, we already have a wrapping element with class `.right`, and this is where we place our article. Our HTML for this section consists of a wrapping `<article>` element that contains a nested heading element and a few paragraphs. Feel free to copy this with placeholder text.
 
 ```html [index]
 <div class="right">
@@ -503,7 +503,7 @@ We also need to define some styles to make it more visually interesting, but not
 }
 ```
 
-Now we add last missing piece of mosaic - change the article section when the user hovers over the navigation item. All we need to is get reference of our 3 articles in HTML with `querySelectorAll()`. Do not forget to place it at the top of our JavaScript file.
+Now we add the last missing piece of the mosaic: changing the article section when the user hovers over a navigation item. All we need to do is get references to our three articles in HTML with `querySelectorAll()`. Do not forget to place it at the top of our JavaScript file.
 
 ```js [index]
 const articles = document.querySelectorAll('.article');
@@ -518,7 +518,7 @@ if (articles[selectedItemIndex]) {
 }
 ```
 
-And we place the code above to inside the if statment which we used before for removing active class from jumbotron navigation.
+And we place the code above inside the `if` statement that we used before for removing the active class from jumbotron navigation.
 
 Here is our final `onMouseOver` function
 

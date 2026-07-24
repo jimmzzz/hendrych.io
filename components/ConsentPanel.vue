@@ -95,7 +95,7 @@ const shouldShowPanel = computed(() => {
 const translations = computed(() => {
     return {
         consentPanelTitle: 'Cookie Consent',
-        consentPanelDescription: 'Website utilize cookies to enhance your browsing experience, analyze website traffic, and personalize content. You have the option to manage your cookie preferences. By clicking "Accept all cookies", you agree with storeing cookies on your device.',
+        consentPanelDescription: 'This website uses cookies to enhance your browsing experience, analyze website traffic, and personalize content. You can manage your cookie preferences. By clicking "Accept all cookies", you agree to storing cookies on your device.',
         consentPanelButtonAccept: 'Accept all cookies',
         consentPanelButtonReject: 'Reject All',
     }

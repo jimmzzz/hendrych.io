@@ -16,7 +16,7 @@ const features = [
     img: 'scroll-indicator',
     title: 'On-Demand Components',
     description:
-      'Need some JS? Nuxt can automatically hydcreate-remove-dom-elementsrate interactive components when they become visible on the page.  ',
+      'Need some JS? Nuxt can automatically hydrate interactive components when they become visible on the page.',
   },
 ];
 </script>

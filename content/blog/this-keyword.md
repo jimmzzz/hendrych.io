@@ -2,7 +2,7 @@
 title: 'This keyword in JavaScript'
 description: 'Understand the behavior of the `this` keyword in JavaScript, how it changes based on context, and how to control its value using different techniques.'
 # image: 'img/blog/animated-landing-page.png'
-tags: [ javscript ]
+tags: [ javascript ]
 author: 'Tomáš Hendrych'
 createdAt: '2026-06-02T18:00:00+01:00'
 difficulty: 'beginner'

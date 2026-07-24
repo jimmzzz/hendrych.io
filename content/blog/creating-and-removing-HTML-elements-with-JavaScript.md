@@ -61,7 +61,7 @@ We have four possible methods:
 
 1. .insertBefore()
 
-The `appendChild()` method and `append()` are fairly similar. Both methods add our new element as a **the last child of theselected parent element**. The `appendChild(element)` accepts a single argument, that we want to insert, while `append(element1, element2, ... elementN)` accepts 1 to N elements. The `append()` method was introduced in ECMAScript 2015, so it has worse browser support than `appendChild()` method, but should be supported in all modern browsers. Here you can compare browser support in [this link](https://caniuse.com/?search=append).
+The `appendChild()` method and `append()` are fairly similar. Both methods add our new element as **the last child of the selected parent element**. The `appendChild(element)` method accepts a single argument that we want to insert, while `append(element1, element2, ... elementN)` accepts 1 to N elements. The `append()` method was introduced in ECMAScript 2015, so it has slightly worse browser support than `appendChild()`, but it should be supported in all modern browsers. Here you can compare browser support in [this link](https://caniuse.com/?search=append).
 
 ```js
 // appendChild() example

@@ -13,7 +13,7 @@ const props = defineProps(["type"]);
     <InformationCircleIcon v-else class="icon solid" /> -->
     <details>
       <summary>
-        <!-- Unamed Slot to render component content -->
+        <!-- Unnamed slot to render component content -->
         <slot />
       </summary>
       <div class="details pt-2">

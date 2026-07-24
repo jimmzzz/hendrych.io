@@ -260,7 +260,7 @@ Translated in human language means that we need to set the input value to "nothi
 
 ### Prevent user from updating text with an empty string
 
-We also need to prevent a user from updating name with empty string. To do so, we need to add condition checking if there is no value, if so then pop up the alert window and return from the function. Thereturn keyword is important there, it will leave function and stop the execution of the code block below, which is responsible for setting the new value of the name.
+We also need to prevent a user from updating the name with an empty string. To do so, we need to add a condition that checks whether there is a value. If there is no value, we show an alert window and return from the function. The `return` keyword is important here because it exits the function and stops execution of the code block below, which is responsible for setting the new value of the name.
 
 ```js
 //1.get element references
