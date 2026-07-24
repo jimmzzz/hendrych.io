@@ -38,11 +38,14 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      GA_ID: process.env.NUXT_PUBLIC_GTAG_ID,
+      gtag: {
+        id: process.env.NUXT_PUBLIC_GTAG_ID,
+      },
     },
   },
   gtag: {
     enabled: false,
+    id: process.env.NUXT_PUBLIC_GTAG_ID,
   },
   content: {
     documentDriven: true,

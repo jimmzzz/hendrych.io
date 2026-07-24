@@ -1,6 +1,6 @@
 <template>
-    <ClientOnly v-if="shouldShowPanel">
-        <div class="consent-panel">
+    <ClientOnly>
+        <div v-if="shouldShowPanel" class="consent-panel">
 
             <LayoutContainer class="consent-panel__container">
                 <div class="consent-panel__text-wrapper">
@@ -18,15 +18,69 @@
 </template>
 
 <script setup lang="ts">
-const { initialize } = useGtag()
+const { initialize, disableAnalytics } = useGtag()
+
+type ConsentValue = 'accepted' | 'rejected'
+type StoredConsent = {
+    value: ConsentValue
+    rejectedAt?: number
+}
+
+const CONSENT_STORAGE_KEY = 'cookie_consent'
+const REJECT_REPROMPT_DAYS = 60
+const REJECT_REPROMPT_MS = REJECT_REPROMPT_DAYS * 24 * 60 * 60 * 1000
 const panelVisible = ref(true)
 
+const saveConsent = (value: ConsentValue) => {
+    const payload: StoredConsent = {
+        value,
+        ...(value === 'rejected' ? { rejectedAt: Date.now() } : {}),
+    }
+
+    localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(payload))
+}
+
+const readConsent = (): ConsentValue | null => {
+    const rawValue = localStorage.getItem(CONSENT_STORAGE_KEY)
+    if (!rawValue) {
+        return null
+    }
+
+    if (rawValue === 'accepted' || rawValue === 'rejected') {
+        return rawValue
+    }
+
+    try {
+        const parsed = JSON.parse(rawValue) as StoredConsent
+        if (parsed.value === 'accepted') {
+            return 'accepted'
+        }
+
+        if (parsed.value === 'rejected') {
+            const rejectedAt = parsed.rejectedAt ?? 0
+            if (Date.now() - rejectedAt >= REJECT_REPROMPT_MS) {
+                localStorage.removeItem(CONSENT_STORAGE_KEY)
+                return null
+            }
+
+            return 'rejected'
+        }
+    } catch {
+        localStorage.removeItem(CONSENT_STORAGE_KEY)
+    }
+
+    return null
+}
+
 const allowCookies = () => {
+    saveConsent('accepted')
     initialize()
     closePanel()
 }
 
 const reject = () => {
+    saveConsent('rejected')
+    disableAnalytics()
     closePanel()
 }
 
@@ -48,10 +102,21 @@ const translations = computed(() => {
 })
 
 onBeforeMount(() => {
-    if (document.cookie.split(";").some((item) => item.trim().startsWith("_ga="))) {
+    const consentValue = readConsent()
+
+    if (consentValue === 'accepted') {
         initialize()
         panelVisible.value = false
+        return
     }
+
+    if (consentValue === 'rejected') {
+        disableAnalytics()
+        panelVisible.value = false
+        return
+    }
+
+    panelVisible.value = true
 })
 
 </script>
