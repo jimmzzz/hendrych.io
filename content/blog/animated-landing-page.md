@@ -2,7 +2,7 @@
 title: 'Animated landing page with gradient overlay'
 description: 'Learn techniques for applying background image overlays for improved text readability and applying the color gradient over the image'
 image: 'img/blog/animated-landing-page.png'
-tags: [ HTML, CSS, JavaScript, Animations ]
+tags: [ html, css, javascript, animations ]
 author: 'Tomáš Hendrych'
 createdAt: '2024-07-01T18:00:00+01:00'
 difficulty: 'beginner'
@@ -10,7 +10,7 @@ difficulty: 'beginner'
 
 In this tutorial we going to build animated landing page which will dynamically change the content base on user interaction. The tutorial use only plain HTML, CSS, JavaScript, so no dependencies and frameworks are needed just your favorite IDE / text editor and passion & time to learn something new.
 
-Our landing page will be a fictional project dedicated to the majestic animals of the African savannas. 
+Our landing page will be a fictional project dedicated to the majestic animals of the African savannas.
 Who doesn't like animals, right? 🦏 🦒
 
 Feel free to adjust this project to your preferences.
@@ -25,8 +25,8 @@ Unleash your creativity and adapt it to your needs, whether it be Marvel/DC supe
 
 ### Tutorial structure
 
-In the first section, we will set our background image and apply an overlay filter to it. 
-This filter will decrease the brightness of the image, enabling us to place text on it with improved contrast and readability. 
+In the first section, we will set our background image and apply an overlay filter to it.
+This filter will decrease the brightness of the image, enabling us to place text on it with improved contrast and readability.
 By doing this, we ensure that the text stands out clearly against the background, making the content more accessible and visually appealing.
 We also add gradient to make our page even more attractive.
 
@@ -35,8 +35,8 @@ This section is designed to draw  user's attention, ensuring that they focus on 
 By utilizing a jumbotron, we can highlight important content, announcements, or CTA (call to action), ensuring they are immediately visible to visitors.
 This enhances the overall user experience by making navigation intuitive and visually engaging.
 
-In the final section, we will create an article section that slides in upon user interaction. 
-This dynamic feature will enhance user engagement by providing an interactive and visually appealing way to present content. 
+In the final section, we will create an article section that slides in upon user interaction.
+This dynamic feature will enhance user engagement by providing an interactive and visually appealing way to present content.
 Sliding animations can capture attention and make the browsing experience more enjoyable.
 
 ## Table of content
@@ -51,12 +51,12 @@ The starting point for this mini project can be found in this [Github repo](http
 
 
 Before we start coding, let's set up our really simple project.
-We will need one file for our HTML markup called `index.html`, a CSS file, and a JavaScript file. 
+We will need one file for our HTML markup called `index.html`, a CSS file, and a JavaScript file.
 First, we will create the HTML file, where we will link our CSS file `styles.css` and create and import our JavaScript file `index.js`, which will be empty for now. Feel free to copy and paste this.
 
 
-I would like to point out the `<link rel="preload" ... />` tag in the header section. 
-This tells the browser to load resources (in our case images) as soon as possible, before they are found in the DOM or required by JavaScript. 
+I would like to point out the `<link rel="preload" ... />` tag in the header section.
+This tells the browser to load resources (in our case images) as soon as possible, before they are found in the DOM or required by JavaScript.
 As a result, the images will be ready immediately when they are needed by JavaScript, which will be handy later in our tutorial.
 
 > TIP: Learn more about preloading in [Google dev (preloading)](https://web.dev/articles/preload-responsive-images){:target="_blank"}
@@ -110,12 +110,12 @@ body {
 
 First, we will start with our background. We want our background image to be below our content. To achieve this, we will add a `<main>` element with the class `.content`.
 
-We will compose our background in layers. If you are familiar with graphical software such as Adobe Photoshop, this follows the same concept, and we will achieve this using z-index. 
+We will compose our background in layers. If you are familiar with graphical software such as Adobe Photoshop, this follows the same concept, and we will achieve this using z-index.
 We need to do this in order to apply a **grayscale filter** and a **gradient effect**.
 
-First, we will declare styles for our bottom layer using the pseudo-element `.content:before`. 
-The important part is to set it to a lower `z-index` than the following layers. 
-We will also set the background image and some other background properties to center our image and cover the whole page. 
+First, we will declare styles for our bottom layer using the pseudo-element `.content:before`.
+The important part is to set it to a lower `z-index` than the following layers.
+We will also set the background image and some other background properties to center our image and cover the whole page.
 The interesting part is `filter: grayscale(100%)`, which turns our image black and white.
 
 > A pseudo-element in CSS is a keyword added to a selector that lets you style a specific part of the selected element. Common examples include ::before and ::after, which allow you to insert content before or after the content of an element, respectively. These are useful for adding decorative content or additional styling without altering the HTML structure. - (chatgpt - definition)
@@ -136,7 +136,7 @@ The interesting part is `filter: grayscale(100%)`, which turns our image black a
     left: 0;
     right: 0;
     z-index: -2;
-    
+
     display: block;
     width: 100vw;
     height: 100vh;
@@ -173,7 +173,7 @@ Next, we need to set the `.content::after` pseudo-element. Our gradient will go 
     left: 0;
     top: 0;
     z-index: -1;
-    
+
     display: block;
     width: 100vw;
     height: 100vh;
@@ -204,7 +204,7 @@ And last but not least, we have to define our final layer, which will be on top 
 
 This step is optional. We will customize the gradient of our background image. You will see how different colors can dramatically change the overall feeling and atmosphere of the presented content.
 
-In the snippet below, you can find preset colors, but feel free to choose the color you prefer. 
+In the snippet below, you can find preset colors, but feel free to choose the color you prefer.
 However, I strongly recommend picking a saturated color and keeping the **alpha** (opacity) between **0.5 and 0.7** to preserve contrast and readability of the content.
 
 > rgba(red, green, blue, alpha)
@@ -238,7 +238,7 @@ All you need to do to apply your custom gradient is to override the CSS variable
 
 ## Jumbotron navigation
 
-Let's move to the second main section called **jumbotron navigation**. 
+Let's move to the second main section called **jumbotron navigation**.
 A "jumbotron" is a large, prominent component used in web design. It is typically designed to grab the user's attention.
 
 In our case, the jumbotron navigation will contain animal names, and the user will be able to switch between active items. When the user clicks an animal name, we will switch the currently selected animal and also change the page background to the respective animal.
@@ -278,7 +278,7 @@ If you look at our navigation items markup you will see, there is defined `id` a
 }
 ```
 
-Finally, we are going to style our navigation. To display our navigation items from top to bottom, we will define our parent element (flex container) as `.jumbo-nav`. 
+Finally, we are going to style our navigation. To display our navigation items from top to bottom, we will define our parent element (flex container) as `.jumbo-nav`.
 We will set the opacity of the items to **0.3**, creating a visual inactive state where only the selected navigation item will be dominant.
 
 ```css [styles]
@@ -286,7 +286,7 @@ We will set the opacity of the items to **0.3**, creating a visual inactive stat
   display: inline-flex;
   flex-direction: column;
 }
-  
+
 .jumbo-nav__item {
   display: inline-block;
   align-self: flex-start;
@@ -309,7 +309,7 @@ First, we need to query all jumbotron navigation items.
 ```js [index]
 // query all nav items
 const navItems = document.querySelectorAll('.jumbo-nav__item');
-const navItemActiveClass = 'jumbo-nav__item--active' 
+const navItemActiveClass = 'jumbo-nav__item--active'
 
 // to track our currently selected item
 let selectedItemIndex = 0;
@@ -346,11 +346,11 @@ navItems.forEach((element) => {
 
 ### Navigation transition
 
-Now we have a working navigation that highlights the selected item, but if we move the mouse to another item, it selects the new one. This works fine, but the effect is a bit too blinking and unnatural. We will add a transition to make it more appealing to users. 
+Now we have a working navigation that highlights the selected item, but if we move the mouse to another item, it selects the new one. This works fine, but the effect is a bit too blinking and unnatural. We will add a transition to make it more appealing to users.
 
 At the bottom of our existing `.jumbo-nav__item` and `.jumbo-nav__item--active` , we will add the following code:
 
-```css [styles]  
+```css [styles]
 .jumbo-nav__item {
   ...
   transition: all 0.5s 0.3s ease;
@@ -393,8 +393,8 @@ function onMouseOver(e) {
 
 ## Article section
 
-We can start working on the last main section of this tutorial. We will create an article section that displays a heading and a few paragraphs about the selected animal. 
-Additionally, we will update this section as the user mouses over different navigation elements. 
+We can start working on the last main section of this tutorial. We will create an article section that displays a heading and a few paragraphs about the selected animal.
+Additionally, we will update this section as the user mouses over different navigation elements.
 In other words, the UI will be updated accordingly based on user interaction.
 
 Lets move to our HTML structure. Inside our `.grid-container` we already got wrapping element with class `.right` and here we place our article. Our HTML for this section consist of wrappping `<article>` element which contains a nested heading element and a few paragraphs. Feel free to copy this with placeholder text.
@@ -526,7 +526,7 @@ Here is our final `onMouseOver` function
 function onMouseOver(e) {
     const currentlyHoveredIndex = e.target.dataset.index;
     const currentItem = navItems[currentlyHoveredIndex];
-  
+
     // remove active class from previous item
     if (currentlyHoveredIndex !== selectedItemIndex) {
       const selectedItem = navItems[selectedItemIndex];
@@ -539,7 +539,7 @@ function onMouseOver(e) {
         articles[selectedItemIndex].classList.add('hidden');
       }
     }
-  
+
     // set active class on new item
     if (currentItem) {
       currentItem.classList.add(navItemActiveClass);
@@ -553,8 +553,8 @@ function onMouseOver(e) {
 
 ## Conclusion
 
-In this tutorial, we focused on enhancing the visual appeal and user experience of our webpage through several key design elements. We started by setting a background image with an overlay filter to decrease its brightness, ensuring that any text placed on it stands out clearly and remains easily readable. This approach improves content accessibility and visual clarity. 
+In this tutorial, we focused on enhancing the visual appeal and user experience of our webpage through several key design elements. We started by setting a background image with an overlay filter to decrease its brightness, ensuring that any text placed on it stands out clearly and remains easily readable. This approach improves content accessibility and visual clarity.
 
-Next, we designed a prominent "jumbotron" navigation element to draw users' attention to important content, announcements, or calls to action, making the navigation intuitive and engaging. 
+Next, we designed a prominent "jumbotron" navigation element to draw users' attention to important content, announcements, or calls to action, making the navigation intuitive and engaging.
 
 Finally, we added a dynamic article section that slides in upon user interaction, providing an interactive and visually appealing way to present content. These elements work together to create a visually striking and user-friendly webpage, enhancing both readability and user engagement.

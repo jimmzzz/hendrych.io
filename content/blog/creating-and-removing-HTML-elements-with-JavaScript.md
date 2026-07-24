@@ -2,7 +2,7 @@
 title: 'Creating and removing HTML elements with JavaScript'
 description: 'In my second article in a series dedicated to DOM API, I will focus on adding and removing HTML elements from the Document Object Model (DOM). These actions are the bread and butter for creating…'
 image: 'https://res.cloudinary.com/dkygppaig/image/upload/v1708463007/hendrych.io/blog/creating-removing-elements.png'
-tags: [ HTML, CSS, JavaScript, DOM Manipulation, Beginner friendly ]
+tags: [ html, css, javascript ]
 author: 'Tomáš Hendrych'
 createdAt: '2024-01-26T12:00:00+01:00'
 updatedAt: '2024-02-02T12:00:00+01:00'
@@ -267,7 +267,7 @@ In our `createButtonEl` callback function, we will create title and subTitle and
 
 ```js
 createBtnEl.addEventListener('click', () => {
-  
+
   const newTitle = createElementWithText('h1', 'new Title', 'title');
   const newSubtitle = createElementWithText(
     'h2',
@@ -313,7 +313,7 @@ That is it. Try to click on the green button and then click on the red button. T
 
 <iframe width="100%" height="300" src="//jsfiddle.net/jimmzzz/qd51gw7L/76/embedded/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
-And now we have completed our app 🎉  
+And now we have completed our app 🎉
 Let's have a coffee :)
 
 ## Conclusion
@@ -340,12 +340,12 @@ In this tutorial we have learned the following:
 
 Originally posted on [Medium.com](https://medium.com/@tom.hendrych/creating-and-removing-html-elements-with-javascript-372bbd4cfdcc)
 
-final code — [https://github.com/jimmzzz/js-basics/tree/main/create-remove-element](https://github.com/jimmzzz/js-basics/tree/main/create-remove-element)  
+final code — [https://github.com/jimmzzz/js-basics/tree/main/create-remove-element](https://github.com/jimmzzz/js-basics/tree/main/create-remove-element)
 
-[https://www.instagram.com/frontendblond/](https://www.instagram.com/frontendblond/)  
+[https://www.instagram.com/frontendblond/](https://www.instagram.com/frontendblond/)
 
-[https://www.linkedin.com/in/tomas-hendrych-cz/](https://www.linkedin.com/in/tomas-hendrych-cz/)  
+[https://www.linkedin.com/in/tomas-hendrych-cz/](https://www.linkedin.com/in/tomas-hendrych-cz/)
 
-[https://www.buymeacoffee.com/tomas.hendrych](https://www.buymeacoffee.com/tomas.hendrych)  
+[https://www.buymeacoffee.com/tomas.hendrych](https://www.buymeacoffee.com/tomas.hendrych)
 
 

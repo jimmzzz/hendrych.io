@@ -2,7 +2,7 @@
 title: 'Debounce function'
 description: 'Learn what a debounce function is, how it works, and how to implement it in JavaScript to improve performance and user experience.'
 # image: 'img/blog/animated-landing-page.png'
-tags: [ JavaScript ]
+tags: [ algorithms, javascript ]
 author: 'Tomáš Hendrych'
 createdAt: '2026-06-08T18:00:00+01:00'
 difficulty: 'advanced'

@@ -2,7 +2,7 @@
 title: 'The prototype inheritance in JavaScript'
 description: 'The prototype inheritance in JavaScript is a powerful mechanism that allows objects to inherit properties and methods from other objects.'
 # image: 'img/blog/animated-landing-page.png'
-tags: [ JavaScript ]
+tags: [ javascript ]
 author: 'Tomáš Hendrych'
 createdAt: '2026-06-03T18:00:00+01:00'
 difficulty: 'beginner'
@@ -19,9 +19,9 @@ draft: true
 - [Summary](#summary)
 
 
-Every time you create an object or array in JavaScript, it comes packed with secret superpowers—methods like `.hasOwnProperty()`, `.map()`, or `.push()`. But where do those methods actually come from? 
+Every time you create an object or array in JavaScript, it comes packed with secret superpowers—methods like `.hasOwnProperty()`, `.map()`, or `.push()`. But where do those methods actually come from?
 
-The answer is **prototypical inheritance**. 
+The answer is **prototypical inheritance**.
 
 Unlike languages like Java or C++ that use strict, class-based blueprints, JavaScript relies on **objects linking to other objects**. Here is a simple guide to how prototypes and inheritance work under the hood.
 
@@ -29,7 +29,7 @@ Unlike languages like Java or C++ that use strict, class-based blueprints, JavaS
 
 ## 1. What is a Prototype?
 
-In JavaScript, almost every object has a hidden, built-in property called its **prototype** (historically referred to as `__proto__`). 
+In JavaScript, almost every object has a hidden, built-in property called its **prototype** (historically referred to as `__proto__`).
 
 Think of a prototype as a **backup plan**. If you ask an object for a property or a method it doesn't have, it doesn't immediately give up and throw an error. Instead, it looks at its prototype to see if *it* has what you're looking for.
 

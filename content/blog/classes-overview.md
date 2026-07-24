@@ -2,7 +2,7 @@
 title: 'Classes overview'
 description: 'Learn about JavaScript classes, their syntax, and how to use them effectively.'
 # image: 'img/blog/animated-landing-page.png'
-tags: [ JavaScript ]
+tags: [ javascript ]
 author: 'Tomáš Hendrych'
 createdAt: '2026-06-02T18:00:00+01:00'
 difficulty: 'beginner'
@@ -51,7 +51,7 @@ The syntax for defining private fields is to prefix the field name with a `#` sy
 class Person {
   #privateField; // Private field
   publicField; // Public field
-  
+
   constructor(name, age) {
     this.name = name;
     this.age = age;

@@ -2,7 +2,7 @@
 title: 'This keyword in JavaScript'
 description: 'Understand the behavior of the `this` keyword in JavaScript, how it changes based on context, and how to control its value using different techniques.'
 # image: 'img/blog/animated-landing-page.png'
-tags: [ JavaScript ]
+tags: [ javscript ]
 author: 'Tomáš Hendrych'
 createdAt: '2026-06-02T18:00:00+01:00'
 difficulty: 'beginner'
@@ -48,7 +48,7 @@ The value of `this` keyword refers to the object that is **calling/invoking** th
 
 ```js [index]
 function foo() {
-  console.log(this); 
+  console.log(this);
 }
 foo(); // Outputs: Window object
 ```
@@ -66,7 +66,7 @@ const obj = {
 obj.foo(); // Outputs: "My Object"
 ```
 
-If we call `foo()` as a method of `obj`, then `this` refers to `obj`, and we can access its properties. 
+If we call `foo()` as a method of `obj`, then `this` refers to `obj`, and we can access its properties.
 
 Now example with multiple levels of nesting:
 

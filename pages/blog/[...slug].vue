@@ -8,13 +8,13 @@
 
                 <span class="blog-post__date">Published on {{ formatDate(data?.createdAt) }} / {{ data?.author }}</span>
 
-                <div
+                <UITag
                     v-for="tag in data.tags"
                     :key="tag.id"
-                    class="blog-post__tag"
+                    className="mr-2 mb-6"
                 >
                     {{ tag }}
-                </div>
+                </UITag>
 
                 <NuxtImg v-if="data?.image" class="blog-post__image" :src="data?.image" />
             </div>
@@ -46,10 +46,6 @@ definePageMeta({
 
 .blog-post__date {
     @apply block mb-4 text-sm text-slate-600;
-}
-
-.blog-post__tag {
-    @apply inline-block mr-2 mb-6 rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700;
 }
 
 .blog-post__image {

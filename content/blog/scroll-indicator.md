@@ -1,12 +1,12 @@
 ---
 title: The scroll indicator
 image: img/blog/scroll-indicator.png
-description: Discover how urban gardening can beautify city spaces and provide sustainable food sources.
+description: Discover how the scroll indicator can enhance user experience by showing page scroll progress.
 createdAt: '2024-03-01T12:00:00+01:00'
 tags:
-  - HTML
-  - CSS
-  - JAVASCRIPT
+  - html
+  - css
+  - javascript
 ---
 
 In this tutorial, We will build the **scroll indicator** AKA **progress bar** in the header. The indicator will show how many percentage of the page has been scrolled by a user. You may notice this feature on some blogging platforms or personal blogs. It is a subtle but effective way how to notify users about their scrolling progression. Oftentimes, also used to indicate the loading of data from API.

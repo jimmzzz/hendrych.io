@@ -2,7 +2,7 @@
 title: 'Throttle function'
 description: 'The throttle function is a programming technique used to limit the rate at which a function can be invoked, ensuring that it is executed at most once in a specified time interval.'
 # image: 'img/blog/animated-landing-page.png'
-tags: [ JavaScript ]
+tags: [ algorithms, javascript ]
 author: 'Tomáš Hendrych'
 createdAt: '2026-06-09T18:00:00+01:00'
 difficulty: 'advanced'
@@ -25,7 +25,7 @@ A throttle function is a programming technique used to limit the rate at which a
 - allows a function to be executed **at most once in a specified time interval**
 - executes immediately on the first call, and then ignores subsequent calls until the time interval has passed
 
-**Example:** 
+**Example:**
 Scroll events can trigger a function that updates the position of an element on the page. If the user scrolls rapidly, the function may be called many times in quick succession, which can lead to performance issues. By using a throttle function, we can ensure that the function is only executed once every 100 milliseconds, for example, regardless of how many times the user scrolls.
 
 
@@ -42,11 +42,11 @@ There are many ways to implement a throttle function in JavaScript.
 
 Lets specify our input and output of the throttle function:
 
-**Input**: 
+**Input**:
   - callback function
   - delay in milliseconds
 
-**Output**: 
+**Output**:
   - a new throttled function
 
 **Implementation tips:**
@@ -63,7 +63,7 @@ function throttle(fn, delay) {
 
   return function throttled(...args) {
     const now = performance.now();
-    
+
     if (now - lastExecutionTime >= delay) {
       fn.apply(this, args);
       lastExecutionTime = now;
@@ -81,5 +81,5 @@ setTimeout(() => log('d'), 300)  // fires → "d" (300ms passed)
 ## Summary
 
 - A throttle function is a programming technique used to limit the rate at which a function can be invoked, ensuring that it is executed **at most once in a specified time interval**.
-- Throttling is useful for optimizing performance and improving user experience in scenarios with rapid, repeated events, which could cause performance issues or unintended consequences if handled without control. 
+- Throttling is useful for optimizing performance and improving user experience in scenarios with rapid, repeated events, which could cause performance issues or unintended consequences if handled without control.
 - Common use cases include scroll events, window resizing, mouse movement, and API rate limiting.

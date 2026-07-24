@@ -2,7 +2,7 @@
 title: 'Intro into AI Agents'
 description: 'An introduction to AI agents, their behavior, and how they interact with their environment.'
 # image: 'img/blog/animated-landing-page.png'
-tags: [ JavaScript, AI ]
+tags: [ javascript, ai ]
 author: 'Tomáš Hendrych'
 createdAt: '2026-06-02T18:00:00+01:00'
 difficulty: 'beginner'

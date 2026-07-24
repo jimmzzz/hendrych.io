@@ -2,7 +2,7 @@
 title: 'Guide to changing HTML content with javascript'
 description: 'This article is focused on updating the content of webpage with the help of JavaScript. We are going to manipulate Document Object Model (DOM)**, which represents the structure of an HTML document.'
 image: 'img/blog/dom-1.png'
-tags: [HTML, CSS, JavaScript, DOM Manipulation, Beginner friendly]
+tags: [html, css, javascript]
 author: 'Tomáš Hendrych'
 createdAt: '2023-12-29T09:00:00+01:00'
 updatedAt: '2023-12-29T09:00:00+01:00'
@@ -314,8 +314,8 @@ Originally posted on [Medium.com](https://medium.com/@tom.hendrych/a-guide-to-ch
 
 final code — [https://github.com/jimmzzz/js-basics/tree/main/changing-page-content](https://github.com/jimmzzz/js-basics/tree/main/changing-page-content)
 
-[https://www.instagram.com/frontendblond/](https://www.instagram.com/frontendblond/)  
+[https://www.instagram.com/frontendblond/](https://www.instagram.com/frontendblond/)
 
-[https://www.linkedin.com/in/tomas-hendrych-cz/](https://www.linkedin.com/in/tomas-hendrych-cz/)  
+[https://www.linkedin.com/in/tomas-hendrych-cz/](https://www.linkedin.com/in/tomas-hendrych-cz/)
 
-[https://www.buymeacoffee.com/tomas.hendrych](https://www.buymeacoffee.com/tomas.hendrych)  
+[https://www.buymeacoffee.com/tomas.hendrych](https://www.buymeacoffee.com/tomas.hendrych)

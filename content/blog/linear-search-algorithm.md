@@ -2,7 +2,7 @@
 title: 'Linear search algorithm'
 description: 'The linear search algorithm is a simple search technique used to find the position of a target element in a list by checking each element sequentially.'
 # image: 'img/blog/animated-landing-page.png'
-tags: [ Algorithms, JavaScript, Typescript ]
+tags: [ algorithms, javascript ]
 author: 'Tomáš Hendrych'
 createdAt: '2026-07-24T17:30:00+01:00'
 difficulty: 'basic'
