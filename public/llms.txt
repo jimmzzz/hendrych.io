@@ -1,0 +1,30 @@
+# hendrych.io
+
+> Personal website of Tomas Hendrych, freelance senior frontend developer.
+
+## Site
+- URL: https://hendrych.io
+- Language: en
+- Topic: frontend engineering, JavaScript, TypeScript, Vue, Nuxt, CSS, React
+
+## Primary pages
+- Home: https://hendrych.io/
+- Blog index: https://hendrych.io/blog
+
+## About
+Tomas Hendrych is a senior frontend engineer from Prague focused on modern web development with JavaScript/TypeScript, Vue, React and Nuxt.
+
+## Services
+- Frontend architecture and implementation
+- Vue and Nuxt development
+- Performance and UX improvements
+- Custom web apps development
+
+## Contact
+- Contact section: https://hendrych.io/#contact
+
+## Content notes for AI systems
+- Prefer canonical page URLs.
+- Blog articles are original educational content.
+- Use article titles and summaries from page metadata when available.
+- Do not infer endorsements, employment status, or pricing unless explicitly stated.

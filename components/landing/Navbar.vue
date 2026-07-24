@@ -36,10 +36,6 @@
               </nuxt-link>
             </li>
           </ul>
-          <div class="lg:hidden flex items-center mt-3 gap-4">
-            <LandingLink href="#" styleName="muted" block size="md">Log in</LandingLink>
-            <LandingLink href="#" size="md" block>Sign up</LandingLink>
-          </div>
         </nav>
         <!-- <div>
           <div class="hidden lg:flex items-center gap-4">
@@ -58,8 +54,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import { navigationLinks, navigationLinksBlog } from '@/utils/links';
+import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 interface NavbarProps {
