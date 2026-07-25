@@ -50,8 +50,9 @@ const techStackGroups = [
       { label: 'Storybook', icon: 'storybook' },
       { label: 'ESLint', icon: 'eslint' },
       { label: 'Prettier', icon: 'prettier' },
-      { label: 'pnpm', icon: 'pnpm' },
+      { label: 'npm', icon: 'npm' },
       { label: 'Vercel', icon: 'vercel' },
+      { label: 'Sentry', icon: 'sentry' },
     ],
   },
   {

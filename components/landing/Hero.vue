@@ -21,7 +21,7 @@
       </UIHeading>
 
       <UIParagraph size="lg" className="mt-4">
-        Senior front-end engineer from Prague. I help startups and product teams ship polished Vue, Nuxt and React experiences with strong performance,
+        Senior front-end engineer from Prague. I help companies and product teams ship polished Vue, Nuxt and React experiences with strong performance,
         accessibility and maintainable code.
       </UIParagraph>
 

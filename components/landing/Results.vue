@@ -25,10 +25,10 @@ const resultCards = [
 
 <template>
   <div class="py-16 md:py-16">
-    <LandingSectionhead align="center">
-      <template #title>{{ translations.title }}</template>
-      <template #desc>{{ translations.description }}</template>
-    </LandingSectionhead>
+    <div class="mt-16 text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">{{ translations.title }}</h2>
+      <p class="text-lg mt-4 text-slate-600">{{ translations.description }}</p>
+    </div>
 
     <div class="mt-12 grid gap-6 md:grid-cols-3">
       <article
