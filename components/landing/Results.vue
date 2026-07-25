@@ -2,6 +2,7 @@
 const translations = {
   title: 'Selected projects and outcomes',
   description: 'A quick snapshot of outcomes from recent frontend delivery work.',
+  viewCareerTimeline: 'See full career timeline',
 }
 
 const resultCards = [
@@ -12,8 +13,8 @@ const resultCards = [
   },
   {
     title: 'High-Traffic E-Commerce',
-    value: 'Mall.cz',
-    description: 'Developed core pages and internal marketing apps for high-volume online shopping platforms.',
+    value: 'Allegro/Mall.cz',
+    description: 'Worked on product listing, detail pages, campaign pages and internal marketing apps for high-volume online shopping platforms.',
   },
   {
     title: 'Engineering Experience',
@@ -40,6 +41,12 @@ const resultCards = [
         <p class="mt-2 text-3xl font-bold text-slate-900">{{ card.value }}</p>
         <p class="mt-3 text-slate-600">{{ card.description }}</p>
       </article>
+    </div>
+
+    <div class="mt-10 flex justify-center">
+      <LandingLink href="/career" styleName="outline">
+        {{translations.viewCareerTimeline}}
+      </LandingLink>
     </div>
   </div>
 </template>

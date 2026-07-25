@@ -35,6 +35,9 @@ import { LINKEDIN_URL } from '../../utils/links';
               LinkedIn profile
             </div>
           </LandingLink>
+          <LandingLink size="lg" href="/career">
+            View career timeline
+          </LandingLink>
         </div>
 
       </div>
