@@ -21,7 +21,13 @@
       </UIHeading>
 
       <UIParagraph size="lg" className="mt-4">
-        Senior frontend developer from Prague. Building dynamic websites/apps using modern technologies like Vue, React, Nuxt, Tailwindcss and more. I leverage the coding AI tools to speed up the development process and deliver high-quality solutions.
+        Senior front-end engineer from Prague. I help startups and product teams ship polished Vue, Nuxt and React experiences with strong performance,
+        accessibility and maintainable code.
+      </UIParagraph>
+
+      <UIParagraph size="md" className="mt-3">
+        Best fit: SaaS products, Design systems, marketing websites, and internal tools that need better UX, faster performance or
+        frontend modernization.
       </UIParagraph>
 
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
@@ -31,6 +37,10 @@
             {{ translations.heroCtaContact }}
           </UIButton>
         </NuxtLink>
+
+        <LandingLink href="/#results" styleName="outline" className="w-full">
+          {{ translations.heroCtaResults }}
+        </LandingLink>
       </div>
 
       <div class="my-4 mb-10 flex justify-center md:mb-0 md:mt-6 md:justify-start dark:text-white text-gray-800 gap-6">
@@ -61,7 +71,8 @@ useHead({
 
 const translations = computed(() => {
   return {
-    heroCtaContact: 'Contact me'
+    heroCtaContact: 'Contact me →',
+    heroCtaResults: 'See my achievements',
   }
 })
 

@@ -26,7 +26,8 @@ export const X_URL = 'https://x.com/frontendBlond'
 export const navigationLinks: NavigationLink[] = [
     { id: 'home', label: 'Home', path: '/' },
     { id: 'services', label: 'Services', path: '/', hash: '#services' },
-    { id: 'aboutMe', label: 'About me', path: '/', hash: '#about-me' },
+    { id: 'about-me', label: 'About me', path: '/', hash: '#about-me' },
+    { id: 'results', label: 'Results', path: '/', hash: '#results' },
     { id: 'contact', label: 'Contact', path: '/', hash: '#contact' },
     { id: 'blog', label: 'Blog', path: '/blog' },
     // { id: 'projects', label: 'Projects', path: '/', hash: '#projects' },

@@ -1,48 +1,47 @@
 <script setup>
 
 const translations = {
-  title: 'Unlock Your Business Potential With My Services',
-  description: `I offer a range of frontend development services to help you succeed online. From responsive design to website
-      optimization, I'm here to help you create a website that not only looks great but also performs flawlessly on any
-      device.`
+  title: 'Services that move your product forward',
+  description: `I combine product thinking with frontend execution, so each deliverable improves usability,
+      performance and maintainability in measurable ways.`
 }
 
 const services = [
   {
-    title: 'HTML & CSS responsive web design',
+    title: 'Frontend development',
     description:
-      'Develop websites that are optimized for different devices and screen sizes and ensure that websites and applications are accessible and usable across different screen resolutions and orientations.',
+      'From landing pages to complex product interfaces in Vue, Nuxt and React, built to be scalable and easy to evolve.',
     icon: 'Device',
   },
   {
-    title: 'Web app development (JavaScript)',
+    title: 'Web app development',
     description:
-      'Build highly interactive web apps, ranging from basic online forms to more complex applications such as CRM systems and ecommerce platforms.',
+      'Interactive product flows, state management and robust UI behavior for internal tools, SaaS products and customer portals.',
     icon: 'Brackets',
   },
   {
-    title: 'UI/UX quality & accessibility',
+    title: 'Accessibility and UX quality',
     description:
-      'I focus on smooth user experience with intuitive navigation, practical keyboard shortcuts and accessibility standards, while ensuring cross-browser compatibility.',
+      'Keyboard navigation, semantic markup and practical UX refinements that reduce friction and improve task completion.',
     icon: 'mdi:cursor-default-click-outline',
 
   },
   {
-    title: 'Performance Optimization',
+    title: 'Performance and Core Web Vitals',
     description:
-      'Optimize websites and applications for better performance. Faster page loading improves user experience.',
+      'Bundle optimization, rendering strategy and image delivery improvements for faster loading and stronger SEO outcomes.',
     icon: 'Gear',
   },
   {
-    title: 'Integration with Backend Systems',
+    title: 'API and backend integration',
     description:
-      'Connect your application to external systems and APIs so your application can send and receive data.',
+      'Reliable API integration, data mapping and resilient error states that keep real-world applications stable.',
     icon: 'Integration',
   },
   {
-    title: 'AI-assisted development',
+    title: 'AI-assisted delivery',
     description:
-      'I use Claude Code, Claude and Gemini in daily work to speed up research, prototyping and implementation while keeping code quality high.',
+      'I use modern AI tooling to speed up prototyping and implementation while preserving code quality through manual review.',
     icon: 'Terminal',
   },
 ];

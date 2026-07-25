@@ -13,10 +13,16 @@ import { LINKEDIN_URL } from '../../utils/links';
       <!-- right -->
       <div class="lg:max-w-[520px]">
         <UIHeading :level="'subHeading'" class="mb-6"> About me</UIHeading>
-        <UIHeading :level="2" class="mb-4"> My goal is develop your online assets and grow your business </UIHeading>
+        <UIHeading :level="2" class="mb-4"> A frontend partner focused on outcomes </UIHeading>
         <UIParagraph size="md" styleName="relaxed" className="mb-6 !text-black">
           Hello! I’m a {{ new Date().getFullYear() - new Date(1992, 1, 1).getFullYear() }}-year-old Frontend Engineer living in Prague, Czech Republic. I taught myself how to code after studying Economics and International Relations. I realized that field wasn't the right fit for me, so I switched to software development, and I haven't looked back since!
         </UIParagraph>
+
+        <ul class="mb-6 space-y-2 text-gray-800">
+          <li>• I communicate clearly and proactively during the whole delivery process.</li>
+          <li>• I focus on business impact, not just polished UI.</li>
+          <li>• I use AI tools to move faster, while code quality checks stay manual.</li>
+        </ul>
 
         <div class="flex flex-col sm:flex-row gap-3">
           <!-- TODO: CV download -->

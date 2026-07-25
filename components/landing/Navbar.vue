@@ -73,7 +73,7 @@ const router = useRouter()
 const open = ref(false);
 const scrolled = ref(0)
 
-const sections = ['home', 'services', 'about-me', 'contact']
+const sections = ['home', 'services', 'results', 'about-me', 'contact']
 const observer = ref<IntersectionObserver>()
 const activeSection = ref<string | null>(null)
 
@@ -129,7 +129,7 @@ const initIntersectionObserver = () => {
 
   elements.forEach((section) => {
     if (section) {
-      observer.value.observe(section)
+      observer.value?.observe(section)
     }
   });
 }

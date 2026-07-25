@@ -40,10 +40,10 @@ interface ContactSectionRow {
 
 const translations = computed(() => {
   return {
-    title: 'Contact',
-    subTitle: `Got a question? I'm here to help!`,
+    title: 'Have a cooperation in mind? Let\'s make it real.',
+    subTitle: `Tell me what you\'re building, your timeline and current blocker. I usually reply within 24 hours.`,
     formTitle: 'Contact info',
-    description: `Do you have a question? I'm here to help! Please fill out the form or send an email.`,
+    description: `Please fill out the form or send an email.`,
   }
 })
 

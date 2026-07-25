@@ -18,6 +18,7 @@ useHead({
     <!-- TODO: clients -->
     <LandingServices id="services" />
     <LandingAbout id="about-me" />
+    <LandingResults id="results" />
     <LandingTechStack />
 
     <!-- <LandingProjects id="projects" /> -->
