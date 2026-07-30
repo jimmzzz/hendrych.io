@@ -45,7 +45,7 @@
 
       <div class="my-4 mb-10 flex justify-center md:mb-0 md:mt-6 md:justify-start dark:text-white text-gray-800 gap-6">
         <a v-for="social in socialLinks" :key="social.icon" :href="social.path" :aria-label="social.label"
-          target="_blank" class="w-[32px] h-[32px] text-gray-400 hover:text-gray-800 ">
+          target="_blank" rel="noopener noreferrer" class="w-[32px] h-[32px] text-gray-400 hover:text-gray-800 ">
           <Icon :name="social.icon" width="32" height="32" />
         </a>
       </div>

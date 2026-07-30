@@ -77,14 +77,15 @@ const inputEmailRef = ref<HTMLInputElement | null>(null)
 const inputMessageRef = ref<HTMLInputElement | null>(null)
 
 const validateName = () => {
-  nameError.value = !name.value ? ERROR_EMPTY : null;
+  nameError.value = !name.value.trim() ? ERROR_EMPTY : null;
 };
 
 const validateEmail = () => {
+  const sanitizedEmail = email.value.trim();
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email.value) {
+  if (!sanitizedEmail) {
     emailError.value = ERROR_EMPTY;
-  } else if (!emailPattern.test(email.value)) {
+  } else if (!emailPattern.test(sanitizedEmail)) {
     emailError.value = ERROR_INVALID;
   } else {
     emailError.value = null;
@@ -92,7 +93,7 @@ const validateEmail = () => {
 };
 
 const validateMessage = () => {
-  messageError.value = !message.value ? ERROR_EMPTY : null;
+  messageError.value = !message.value.trim() ? ERROR_EMPTY : null;
 };
 
 const formValid = computed(() => {
@@ -116,26 +117,34 @@ const resetToForm = () => {
 
 const submitForm = async () => {
   errorMessage.value = ''
-  isSubmitting.value = true
+  validateName()
+  validateEmail()
+  validateMessage()
 
   if (!formValid.value) {
-    if (!name.value) {
-      nameError.value = ERROR_EMPTY
+    if (nameError.value) {
       inputNameRef.value?.focus()
       return
     }
 
-    if (!email.value) {
-      emailError.value = ERROR_EMPTY
+    if (emailError.value) {
       inputEmailRef.value?.focus()
       return
     }
 
-    if (!message.value) {
-      messageError.value = ERROR_EMPTY
+    if (messageError.value) {
       inputMessageRef.value?.focus()
       return
     }
+  }
+
+  isSubmitting.value = true
+
+  const payload = {
+    access_key: WEB3FORMS_ACCESS_KEY,
+    name: name.value.trim(),
+    email: email.value.trim(),
+    message: message.value.trim(),
   }
 
   try {
@@ -145,12 +154,7 @@ const submitForm = async () => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_ACCESS_KEY,
-        name: name.value,
-        email: email.value,
-        message: message.value,
-      }),
+      body: JSON.stringify(payload),
     });
     const result = await response.json();
     if (result.success) {

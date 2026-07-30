@@ -10,7 +10,13 @@
           </a>
           <Logo class="hidden lg:flex" />
           <div class="block lg:hidden">
-            <button @click="open = !open" class="text-gray-800">
+            <button
+              @click="open = !open"
+              class="text-gray-800"
+              :aria-expanded="open ? 'true' : 'false'"
+              aria-controls="primary-navigation"
+              aria-label="Toggle navigation menu"
+            >
               <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title>Menu</title>
                 <path v-show="open" fill-rule="evenodd" clip-rule="evenodd"
@@ -23,15 +29,15 @@
             </button>
           </div>
         </div>
-        <nav class="w-full lg:w-auto mt-2 lg:flex lg:mt-0" :class="{ block: open, hidden: !open }">
+        <nav id="primary-navigation" class="w-full lg:w-auto mt-2 lg:flex lg:mt-0" :class="{ block: open, hidden: !open }">
           <ul class="flex flex-col lg:flex-row lg:gap-3">
             <li v-for="link in navLinks" :key="link.label">
               <!-- v-if="link.url !== '/blog'" -->
               <!-- :class="{ 'active-nav-link': $route.hash === link.hash || (!$route.hash && !link.hash && link.path.length < 2) }" -->
-              <nuxt-link aria-current="page" :to="{ path: link.path, hash: link.hash }"
+              <nuxt-link :aria-current="`#${activeSection}` === link.hash ? 'page' : undefined" :to="{ path: link.path, hash: link.hash }"
                 :class="{ 'active-nav-link': `#${activeSection}` === link.hash }"
                 class="flex lg:px-3 py-2 text-gray-600 hover:text-primary-500"
-                @click.prevent="scrollToElement(link.id)">
+                @click="handleNavClick($event, link)">
                 {{ link.label }}
               </nuxt-link>
             </li>
@@ -54,8 +60,9 @@
 </template>
 
 <script setup lang="ts">
+import type { NavigationLink } from '@/utils/links';
 import { navigationLinks, navigationLinksBlog } from '@/utils/links';
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 interface NavbarProps {
@@ -69,7 +76,6 @@ const props = withDefaults(defineProps<NavbarProps>(), {
 });
 
 const route = useRoute()
-const router = useRouter()
 const open = ref(false);
 const scrolled = ref(0)
 
@@ -93,6 +99,19 @@ const scrollToElement = (id: string) => {
     initIntersectionObserver()
   }, 600);
 };
+
+const isLandingSectionLink = (link: NavigationLink) => {
+  return link.path === '/' && Boolean(link.hash) && sections.includes(link.id)
+}
+
+const handleNavClick = (event: MouseEvent, link: NavigationLink) => {
+  if (isLandingSectionLink(link) && route.path === '/') {
+    event.preventDefault()
+    scrollToElement(link.id)
+  }
+
+  open.value = false
+}
 
 const toggleNavbarShadow = () => {
   const navBar = document.getElementById('navBar');
@@ -143,21 +162,28 @@ const updateActiveSection = (sectionId: string) => {
   }
 }
 
-onMounted(() => {
-  window.addEventListener('scroll', () => {
-    if (route.name !== 'blog-slug') {
-      toggleNavbarShadow()
-    }
+const handleWindowScroll = () => {
+  if (route.name !== 'blog-slug') {
+    toggleNavbarShadow()
+  }
 
-    if (route.name === 'blog-slug') {
-      calcScrollIndicator()
-    }
-  });
+  if (route.name === 'blog-slug') {
+    calcScrollIndicator()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleWindowScroll);
 
 
   // Intersection
   initIntersectionObserver()
 });
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleWindowScroll)
+  observer.value?.disconnect()
+})
 </script>
 
 <style>

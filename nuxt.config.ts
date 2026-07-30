@@ -9,6 +9,11 @@ const seoData = {
 };
 
 export default defineNuxtConfig({
+  routeRules: {
+    '/play': {
+      sitemap: false,
+    },
+  },
   app: {
     head: {
       // htmlAttrs: {

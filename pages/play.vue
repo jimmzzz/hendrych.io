@@ -2,10 +2,29 @@
 definePageMeta({
   layout: "landing",
 });
+
+useHead({
+  title: "UI Components | Hendrych.io",
+  meta: [
+    {
+      name: "description",
+      content: "Internal UI component showcase page for Hendrych.io.",
+    },
+    {
+      name: "robots",
+      content: "noindex, nofollow",
+    },
+  ],
+});
 </script>
 
 <template>
   <LayoutContainer class="py-20">
+
+    <UIHeading :level="1" class="mb-4"> UI Components </UIHeading>
+    <UIParagraph size="sm" class="mb-8">
+      Internal page that showcases all reusable components from the UI component set.
+    </UIParagraph>
 
     <UIHeading :level="1" class="mb-8"> Typography </UIHeading>
     <hr class="my-6">
@@ -77,5 +96,41 @@ definePageMeta({
       <UIButton size="md" styleName="muted" class="mr-6"> Secondary </UIButton>
       <UIButton size="sm" styleName="muted" class="mr-6"> Secondary </UIButton>
     </div>
+
+    <UIHeading :level="1" class="mb-8"> Tags </UIHeading>
+
+    <div class="mb-8 flex flex-wrap gap-4">
+      <UITag color="gray">Gray</UITag>
+      <UITag color="slate">Slate</UITag>
+      <UITag color="blue">Blue</UITag>
+      <UITag color="green">Green</UITag>
+      <UITag color="amber">Amber</UITag>
+      <UITag color="rose">Rose</UITag>
+    </div>
+
+    <div class="mb-8 flex flex-wrap gap-4">
+      <UITag size="sm" color="blue">Small</UITag>
+      <UITag size="md" color="blue">Medium</UITag>
+      <UITag size="lg" color="blue">Large</UITag>
+    </div>
+
+    <div class="mb-14 flex flex-wrap gap-4">
+      <UITag color="green" :active="true">Active</UITag>
+      <UITag color="gray">
+        <template #prefix>
+          <span>•</span>
+        </template>
+        With prefix slot
+      </UITag>
+      <UITag color="rose">
+        With suffix slot
+        <template #suffix>
+          <span>+</span>
+        </template>
+      </UITag>
+    </div>
+
+    <UIHeading :level="1" class="mb-8"> Breadcrumb </UIHeading>
+    <UIBreadCrumb />
   </LayoutContainer>
 </template>
