@@ -27,6 +27,7 @@ const tagColors: Record<string, string> = {
     python: "#3776AB",
     rust: "#CE422B",
     ai: "#10A37F",
+    git: "#F05032",
     animations: "#8B5CF6",
     development: "#64748B",
     default: "#9CA3AF",
@@ -44,6 +45,7 @@ const tagIcons: Record<string, string> = {
     rust: "simple-icons:rust",
     ai: "hugeicons:artificial-intelligence-04",
     animations: "mdi:motion-outline",
+    git: "mdi:git",
     development: "carbon:code",
     default: "carbon:document-blank",
 };
